@@ -1,0 +1,20 @@
+- name:         php-markdown-extended
+  version:      0.1-alpha
+  link:         http://github.com/atelierspierrot/markdown-extended/releases/tag/v0.1-alpha
+  status:       alpha
+  host:         GitHub
+  repository:   http://github.com/atelierspierrot/markdown-extended
+  watch_url:    http://github.com/atelierspierrot/markdown-extended
+  api_infos:    https://api.github.com/repos/atelierspierrot/markdown-extended/
+  manifest:     submodules/php-markdown-extended/composer.json
+  zipfile:      http://github.com/atelierspierrot/markdown-extended/zipball/master
+  tarball:      http://github.com/atelierspierrot/markdown-extended/tarball/master
+
+- name:     ruby-gem
+  version:  0.0.1
+  link:     https://github.com/markdown-extended/ruby-gem/releases/tag/v0.0.1
+  status:   stable
+  host:     GitHub
+  repository:     https://github.com/markdown-extended/ruby-gem
+  zipfile:  http://github.com/markdown-extended/ruby-gem/zipball/master
+  tarball:  http://github.com/markdown-extended/ruby-gem/tarball/master

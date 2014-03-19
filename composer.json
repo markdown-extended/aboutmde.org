@@ -1,0 +1,29 @@
+{
+    "require": {
+        "php": ">=5.3.0",
+        "psr/log": "dev-master",
+        "atelierspierrot/assets-manager": "1.*",
+        "atelierspierrot/templatengine": "1.*",
+        "atelierspierrot/assets-library": "1.*",
+        "atelierspierrot/patterns": "1.*",
+        "atelierspierrot/library": "1.*",
+        "atelierspierrot/webfilesystem": "1.*",
+        "symfony/yaml": "~2.4",
+        "atelierspierrot/markdown-extended": "dev-master",
+        "carte-blanche/core": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "AboutMde": "src" }
+    },
+    "scripts": {
+        "post-autoload-dump": "\\Assets\\Composer\\TemplateEngineInstaller::postAutoloadDump"
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "bin-dir": "bin",
+        "vendor-dir": "src/vendor"
+    },
+    "extra": {
+        "views-functions": "src/views_functions.php"
+    }
+}

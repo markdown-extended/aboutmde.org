@@ -1,0 +1,288 @@
+/* Blocks */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+section#content {
+    padding-top: 20px;
+}
+
+/* Typo */
+h1 a,h1 a:hover,h1 a:active {color: #333333;text-decoration:none;}
+h2:before   {content: "# ";}
+h3:before   {content: "## ";}
+h2.nobefore:before, h3.nobefore:before {content:"";}
+code, pre   {overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;}
+
+.about {
+  padding: 15px;
+  margin: 0 -15px 15px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 0px 0px 0px 6px;
+}
+
+/* Active nav */
+ul.nav li.active a {
+    font-weight: bold;
+    border-right: 3px solid #3399CC;
+}
+
+header h1 img {
+    margin-bottom: 6px;
+}
+footer {
+    text-align: right;
+    font-size: .9em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 12px;
+    color: #777;
+}
+.footer-bordered {
+    height: 120px;
+    background-color: #f5f5f5;
+    color: #333333;
+    padding: 12px;
+}
+
+.jumbotron.home {
+  border-radius:5px;
+  padding: 30px;
+}
+
+.colfixed-wrapper {
+    position: relative;
+}
+.colfixed {
+    position: fixed;
+}
+
+.last-infos {
+    border-top: 1px solid #f5f5f5;
+    color: #777;
+    margin-top: 12px;
+    padding: 12px;
+}
+
+/* Show/Hide Handlers */
+a.handler   {color: #737373; background: transparent url(../img/arrow-right.png) no-repeat center left; padding-left: 12px;}
+a.handler.strong {font-weight: bold;}
+a.handler.down {background-image: url(../img/arrow-down.png);}
+a.handler.left {background-image: url(../img/arrow-left.png);}
+a.handler.noimg {background-image: none;}
+
+.footnotes  {font-size: .92em; margin: 2em 10em 0 1em; border-top: 1px solid #ddd;}
+.footnotes .credits  {text-align: left;font-size: .96em;text-indent:0;}
+a.footnote_link {color: #2380A0; font-weight: bold;}
+.footnotes li {margin-left: 1em;}
+
+/* tablesorter */
+table.tablesorter thead th {cursor: pointer;position:relative;}
+table.tablesorter thead th a {display: block;}
+table.tablesorter thead th:hover a, table.tablesorter thead th a:hover {text-decoration:none;}
+table.tablesorter thead th a span.glyphicon {font-size:.8em;}
+
+/* Github buttons */
+ul.gh-buttons {
+  list-style:none;
+  height:40px;  
+  padding:0;
+  background: #eee;
+  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
+  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  border-radius:5px;
+  border:1px solid #d2d2d2;
+  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
+  width:270px;
+}
+
+ul.gh-buttons li {
+  width:89px;
+  float:left;
+  border-right:1px solid #d2d2d2;
+  height:40px;
+}
+
+ul.gh-buttons a {
+  line-height:1;
+  font-size:11px;
+  color:#999;
+  display:block;
+  text-align:center;
+  padding-top:6px;
+  height:40px;
+}
+
+ul.gh-buttons li + li {
+  width:88px;
+  border-left:1px solid #fff;
+}
+
+ul.gh-buttons li + li + li {
+  border-right:none;
+  width:89px;
+}
+
+ul.gh-buttons a strong {
+  font-size:14px;
+  display:block;
+  color:#222;
+}
+/*
+ul.gh-buttons > li:hover,
+ul.gh-buttons > li:hover > a,
+ul.gh-buttons > li > a:hover {
+  background: -moz-linear-gradient(top, #dddddd 0%, #f8f8f8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(100%,#f8f8f8));
+  background: -webkit-linear-gradient(top, #dddddd 0%,#f8f8f8 100%);
+  background: -o-linear-gradient(top, #dddddd 0%,#f8f8f8 100%);
+  background: -ms-linear-gradient(top, #dddddd 0%,#f8f8f8 100%);
+  background: linear-gradient(top, #dddddd 0%,#f8f8f8 100%);
+  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
+}
+*/
+ul.gh-buttons a:hover,
+ul.gh-buttons a:hover strong {
+  text-decoration: none;
+}
+
+/* Toc */
+/* First level of nav */
+.bs-sidebar {
+    width: auto;
+    max-width: 30%;
+    min-width: 20%;
+    max-width: 280px;
+    margin: 30px 0px;
+    padding: 10px;
+    background-color: #f7f5fa;
+    border-radius: 5px;
+}
+.bs-sidebar.pull-left {
+    margin-right: 30px;
+}
+.bs-sidebar.pull-right {
+    margin-left: 30px;
+}
+
+/* All levels of nav */
+.bs-sidebar .nav > li > a {
+  display: block;
+  color: #716b7a;
+  padding: 5px 20px;
+}
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #e5e3e9;
+}
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+  font-weight: bold;
+  color: #563d7c;
+  background-color: transparent;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-sidebar .nav .nav {
+  display: none; /* Hide by default, but at >768px, show it */
+  margin-bottom: 8px;
+}
+.bs-sidebar .nav .nav > li > a {
+  padding-top:    3px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  font-size: 90%;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+  .bs-sidebar .nav > .active > ul {
+    display: block;
+  }
+}
+
+/* permalinks title */
+h1 a.permalink, h2 a.permalink,
+h3 a.permalink, h4 a.permalink, h5 a.permalink {
+    font-size: 13pt;
+    color: #ffffff/*#EFEFEF*/;
+	background-image:none !important;
+	font-size: .8em;
+	font-weight: normal !important;
+	padding: 0px 6px 2px 6px !important;
+	line-height: inherit !important;
+    line-height: 125%;
+    vertical-align: middle;
+}
+h1 a.permalink:first-child, h2 a.permalink:first-child,
+h3 a.permalink:first-child, h4 a.permalink:first-child, h5 a.permalink:first-child {
+    padding-left: 12px !important;
+}
+h1:hover a.permalink, h2:hover a.permalink,
+h3:hover a.permalink, h4:hover a.permalink, h5:hover a.permalink {
+    color: #ccc;
+}
+h1 a.permalink:hover, h2 a.permalink:hover,
+h3 a.permalink:hover, h4 a.permalink:hover, h5 a.permalink:hover {
+    color: #2A6496;
+}
+
+
+/* Media Queries*/
+@media print, screen and (max-width: 992px) {
+    body {
+        margin-bottom: 120px;
+    }
+    .col-bordered {
+        border-left: 1px solid #f5f5f5;
+    }
+    ul.gh-buttons a small {
+        display:inline;
+    }
+}
+
+@media print, screen and (max-width: 768px) {
+    body {
+        padding-top: 50px;
+    }
+    ul.gh-buttons, header p.view {
+        position:static;
+    }
+  
+}
+
+@media print {
+    .show-on-printer {
+        display: block !important;
+    }
+    .content-print {
+        width: 100% !important;
+        border: none;
+    }
+    footer {
+        text-align: left;
+        font-size: .9em;
+        position: relative;
+        bottom: auto;
+        width: 100%;
+        padding-bottom: 12px;
+        color: #333333;
+    }
+    .footer-bordered {
+        height: 100%;
+        background-color: none;
+        border-top: 1px solid #404040;
+        color: #333333;
+        margin-top: 20px;
+        padding: 12px;
+    }
+}

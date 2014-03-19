@@ -1,0 +1,1255 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "146946822eaa256904994c13ab715c26",
+    "packages": [
+        {
+            "name": "atelierspierrot/assets-library",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/assets-library.git",
+                "reference": "7ede272579412d074af7adb4572730d130a840a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/assets-library/zipball/7ede272579412d074af7adb4572730d130a840a7",
+                "reference": "7ede272579412d074af7adb4572730d130a840a7",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/assets-manager": "1.*"
+            },
+            "require-dev": {
+                "atelierspierrot/templatengine": "1.*"
+            },
+            "type": "library-assets",
+            "extra": {
+                "assets-dir": "src",
+                "assets-presets": {
+                    "reset": {
+                        "css": "css/commons/reset.css.php"
+                    },
+                    "typography": {
+                        "css": "css/commons/typography.css.php"
+                    },
+                    "forms": {
+                        "require": [
+                            "checkboxes",
+                            "form_serialize",
+                            "field-toggler",
+                            "fields-collection"
+                        ]
+                    },
+                    "utilities": {
+                        "css": "css/commons/utilities.css.php"
+                    },
+                    "css-commons": {
+                        "css": "css/commons/commons.css.php"
+                    },
+                    "boxes": {
+                        "css": "css/boxes/boxes.css.php"
+                    },
+                    "buttons-base": {
+                        "css": "css/buttons/base/base_buttons.css"
+                    },
+                    "buttons-action": {
+                        "css": "css/buttons/callToAction/callToAction_buttons.css"
+                    },
+                    "array-remove": {
+                        "js": "js/array/array_remove.js"
+                    },
+                    "dump": {
+                        "js": "js/array/dump.js"
+                    },
+                    "each": {
+                        "js": "js/array/each.js"
+                    },
+                    "join": {
+                        "js": "js/array/join.js"
+                    },
+                    "in-array": {
+                        "js": "js/array/in_array.js"
+                    },
+                    "array": {
+                        "require": [
+                            "array-remove",
+                            "dump",
+                            "each",
+                            "join",
+                            "in-array"
+                        ]
+                    },
+                    "ucfirst": {
+                        "js": "js/string/ucfirst.js"
+                    },
+                    "string": {
+                        "require": [
+                            "ucfirst"
+                        ]
+                    },
+                    "debug": {
+                        "js": "js/debug/debug.js"
+                    },
+                    "extend": {
+                        "js": "js/extend/extend.js"
+                    },
+                    "cookies": {
+                        "js": "js/cookies/cookies.js"
+                    },
+                    "clone": {
+                        "js": "js/commons/clone.js"
+                    },
+                    "apply-callback": {
+                        "js": "js/commons/apply_callback.js"
+                    },
+                    "uniqid": {
+                        "js": "js/system/uniqid.js"
+                    },
+                    "is-defined": {
+                        "js": "js/system/is_defined.js"
+                    },
+                    "registry": {
+                        "js": "js/registry/registry.js"
+                    },
+                    "system": {
+                        "require": [
+                            "uniqid",
+                            "is-defined",
+                            "registry"
+                        ]
+                    },
+                    "popup": {
+                        "js": "js/window/popup_set.js",
+                        "require": [
+                            "join"
+                        ]
+                    },
+                    "window-sizes": {
+                        "js": "js/window/get_window_sizes.js"
+                    },
+                    "opener-focus": {
+                        "js": "js/window/opener_focus.js"
+                    },
+                    "window": {
+                        "require": [
+                            "popup",
+                            "window-sizes",
+                            "opener-focus"
+                        ]
+                    },
+                    "document-load": {
+                        "js": "js/document/document_load.js"
+                    },
+                    "document-sizes": {
+                        "js": "js/document/get_document_sizes.js"
+                    },
+                    "document": {
+                        "require": [
+                            "document-load",
+                            "document-sizes"
+                        ]
+                    },
+                    "show-hide": {
+                        "js": "js/dom_blocks/show_hide.js",
+                        "require": [
+                            "classes"
+                        ]
+                    },
+                    "trigger-click": {
+                        "js": "js/links/trigger_click.js"
+                    },
+                    "dom-blocks": {
+                        "require": [
+                            "show-hide"
+                        ]
+                    },
+                    "get-url": {
+                        "js": "js/url/get_url.js"
+                    },
+                    "is-url": {
+                        "js": "js/url/is_url.js"
+                    },
+                    "url": {
+                        "require": [
+                            "get-url",
+                            "is-url"
+                        ]
+                    },
+                    "classes": {
+                        "js": "js/node/classes.js"
+                    },
+                    "offset": {
+                        "js": "js/node/get_offset.js"
+                    },
+                    "style-attribute": {
+                        "js": "js/node/get_style_attribute.js"
+                    },
+                    "select": {
+                        "js": "js/node/select.js"
+                    },
+                    "node": {
+                        "require": [
+                            "classes",
+                            "offset",
+                            "style-attribute",
+                            "select"
+                        ]
+                    },
+                    "font-tools": {
+                        "js": "js/font_tools/font_tools.js"
+                    },
+                    "effect": {
+                        "js": "js/effects/effect.js",
+                        "require": [
+                            "registry",
+                            "extend",
+                            "style-attribute",
+                            "offset"
+                        ]
+                    },
+                    "effect-blind": {
+                        "js": "js/effects/blind/blind.js",
+                        "require": [
+                            "effect"
+                        ]
+                    },
+                    "effect-slide": {
+                        "js": "js/effects/slide/slide.js",
+                        "require": [
+                            "effect"
+                        ]
+                    },
+                    "effect-fade": {
+                        "js": "js/effects/fade/fade.js",
+                        "require": [
+                            "effect"
+                        ]
+                    },
+                    "effects": {
+                        "require": [
+                            "effect-blind",
+                            "effect-slide",
+                            "effect-fade"
+                        ]
+                    },
+                    "checkboxes-change-class-oncheck": {
+                        "js": "js/forms/checkboxes/change_class_oncheck.js"
+                    },
+                    "checkboxes-check-all": {
+                        "js": "js/forms/checkboxes/check_all.js"
+                    },
+                    "checkboxes": {
+                        "require": [
+                            "checkboxes-change-class-oncheck",
+                            "checkboxes-check-all"
+                        ]
+                    },
+                    "form-serialize": {
+                        "js": "js/forms/form_serialize/form_serialize.js"
+                    },
+                    "field-toggler": {
+                        "js": "js/forms/field_toggler/field_toggler.js"
+                    },
+                    "fields-collection": {
+                        "js": "js/forms/fields_collection/fields_collection.js"
+                    },
+                    "accordion": {
+                        "js": "js/accordion/accordion.js",
+                        "css": "js/accordion/accordion.css",
+                        "require": [
+                            "debug",
+                            "cookies",
+                            "extend",
+                            "document-load",
+                            "classes"
+                        ]
+                    },
+                    "tab-content": {
+                        "js": "js/tab-content/tab-content.js",
+                        "css": "js/tab-content/tab-content.css",
+                        "require": [
+                            "extend",
+                            "document-load",
+                            "classes",
+                            "cookies"
+                        ]
+                    },
+                    "tooltips": {
+                        "js": "js/tooltips/tooltips.js",
+                        "css": "js/tooltips/tooltips.css",
+                        "require": [
+                            "extend",
+                            "document-load",
+                            "registry",
+                            "classes"
+                        ]
+                    },
+                    "draggable": {
+                        "js": "js/draggable/draggable.js",
+                        "css": "js/draggable/draggable.css",
+                        "require": [
+                            "clone",
+                            "extend",
+                            "document-load",
+                            "classes",
+                            "style-attribute",
+                            "offset",
+                            "document-sizes"
+                        ]
+                    },
+                    "resizable": {
+                        "js": "js/resizable/resizable.js",
+                        "css": "js/resizable/resizable.css",
+                        "require": [
+                            "clone",
+                            "extend",
+                            "document-load",
+                            "classes",
+                            "style-attribute"
+                        ]
+                    },
+                    "ajax": {
+                        "js": "js/ajax/ajax.js",
+                        "require": [
+                            "debug",
+                            "clone",
+                            "extend",
+                            "document-load",
+                            "form-serialize",
+                            "node",
+                            "uniqid",
+                            "in-array"
+                        ]
+                    },
+                    "dialog-box": {
+                        "js": "js/dialog-box/dialog-box.js",
+                        "css": "js/dialog-box/dialog-box.css",
+                        "require": [
+                            "draggable",
+                            "classes",
+                            "window-sizes",
+                            "ajax"
+                        ]
+                    }
+                },
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/assets-library.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "The javascript & css library of Les Ateliers.",
+            "homepage": "http://github.com/atelierspierrot/assets-library",
+            "keywords": [
+                "javascript library"
+            ],
+            "time": "2013-12-21 12:26:23"
+        },
+        {
+            "name": "atelierspierrot/assets-manager",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/assets-manager.git",
+                "reference": "cfced07a8b955bfbed9dbc9c986d4409a206480b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/assets-manager/zipball/cfced07a8b955bfbed9dbc9c986d4409a206480b",
+                "reference": "cfced07a8b955bfbed9dbc9c986d4409a206480b",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/library": "1.*",
+                "atelierspierrot/patterns": "1.*",
+                "composer-plugin-api": "1.0.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.*@dev",
+                "sami/sami": "dev-master"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "\\AssetsManager\\Composer\\AssetsManagerPlugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "AssetsManager": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "A Composer plugin to manage \"***-assets\" package type",
+            "homepage": "http://github.com/atelierspierrot/assets-manager",
+            "keywords": [
+                "assets",
+                "composer plugin",
+                "package"
+            ],
+            "time": "2013-11-06 20:15:32"
+        },
+        {
+            "name": "atelierspierrot/devdebug",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/devdebug.git",
+                "reference": "e350abec3c944ac3214509ba1feb39ec1641bcf6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/devdebug/zipball/e350abec3c944ac3214509ba1feb39ec1641bcf6",
+                "reference": "e350abec3c944ac3214509ba1feb39ec1641bcf6",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/assets-manager": "1.*",
+                "atelierspierrot/templatengine": "1.*",
+                "php": ">=5.3.0",
+                "psr/log": "dev-master"
+            },
+            "require-dev": {
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "assets-dir": "www",
+                "assets-vendor-dir": "vendor",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "DevDebug": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "A PHP Package to help development and debugging.",
+            "homepage": "http://github.com/atelierspierrot/devdebug",
+            "keywords": [
+                "debug",
+                "development",
+                "library",
+                "php"
+            ],
+            "time": "2013-11-06 20:25:36"
+        },
+        {
+            "name": "atelierspierrot/internationalization",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/internationalization.git",
+                "reference": "39525d564197ce3c3693781dcf1a74f2d775bd1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/internationalization/zipball/39525d564197ce3c3693781dcf1a74f2d775bd1c",
+                "reference": "39525d564197ce3c3693781dcf1a74f2d775bd1c",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/patterns": "1.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "1.4.*",
+                "sami/sami": "dev-master",
+                "twig/extensions": "dev-master",
+                "twig/twig": "1.*"
+            },
+            "type": "library",
+            "extra": {
+                "views-functions": "src/I18n/aliases.php",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "I18n": "src"
+                },
+                "files": [
+                    "src/I18n/aliases.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "A PHP package to manage i18n: translations, pluralizations and date formats according to a localization.",
+            "homepage": "http://github.com/atelierspierrot/internationalization",
+            "keywords": [
+                "i18n",
+                "internationalization",
+                "localization"
+            ],
+            "time": "2013-11-06 20:39:20"
+        },
+        {
+            "name": "atelierspierrot/library",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/library.git",
+                "reference": "b71101117baa6cc279821499bbf9c5215115367d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/library/zipball/b71101117baa6cc279821499bbf9c5215115367d",
+                "reference": "b71101117baa6cc279821499bbf9c5215115367d",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/patterns": "1.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "1.4.*",
+                "psr/log": "dev-master",
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Library": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "The PHP library package of Les Ateliers Pierrot.",
+            "homepage": "http://github.com/atelierspierrot/library",
+            "keywords": [
+                "helpers",
+                "library"
+            ],
+            "time": "2014-02-01 11:28:23"
+        },
+        {
+            "name": "atelierspierrot/markdown-extended",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/markdown-extended.git",
+                "reference": "3b8780e5b0b47a6f0a189c93dba8a5f6900cc612"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/markdown-extended/zipball/3b8780e5b0b47a6f0a189c93dba8a5f6900cc612",
+                "reference": "3b8780e5b0b47a6f0a189c93dba8a5f6900cc612",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "1.4.*",
+                "phpunit/phpunit": "3.7.*",
+                "sami/sami": "dev-master"
+            },
+            "bin": [
+                "bin/markdown-extended"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.*-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "MarkdownExtended": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "John Gruber",
+                    "homepage": "http://daringfireball.net/"
+                },
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Michel Fortin",
+                    "homepage": "http://michelf.com/",
+                    "role": "markdown Developer"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                },
+                {
+                    "name": "Fletcher T. Penney",
+                    "homepage": "http://fletcherpenney.net/"
+                }
+            ],
+            "description": "A complete PHP 5.3 package of Markdown syntax parser (extended version)",
+            "homepage": "http://github.com/atelierspierrot/markdown-extended",
+            "keywords": [
+                "markdown"
+            ],
+            "time": "2014-03-10 21:06:43"
+        },
+        {
+            "name": "atelierspierrot/mime-mailer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/mime-mailer.git",
+                "reference": "a5157efdaa5ed9f197bcf151b71d544a5ee5fcf8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/mime-mailer/zipball/a5157efdaa5ed9f197bcf151b71d544a5ee5fcf8",
+                "reference": "a5157efdaa5ed9f197bcf151b71d544a5ee5fcf8",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/library": "1.*",
+                "atelierspierrot/patterns": "1.*",
+                "atelierspierrot/validators": "1.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "1.4.*",
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "MimeMailer": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "A package to send rich MIME emails.",
+            "homepage": "http://github.com/atelierspierrot/mime-mailer",
+            "keywords": [
+                "emailing",
+                "mime"
+            ],
+            "time": "2013-11-06 21:45:16"
+        },
+        {
+            "name": "atelierspierrot/patterns",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/patterns.git",
+                "reference": "5bcdff59e94f6fe4e3388da1340f884f51749899"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/patterns/zipball/5bcdff59e94f6fe4e3388da1340f884f51749899",
+                "reference": "5bcdff59e94f6fe4e3388da1340f884f51749899",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "1.4.*",
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Patterns": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "A set of PHP classic interfaces or abstract classes patterns.",
+            "homepage": "http://github.com/atelierspierrot/patterns",
+            "keywords": [
+                "design patterns",
+                "patterns",
+                "php"
+            ],
+            "time": "2013-11-06 21:46:15"
+        },
+        {
+            "name": "atelierspierrot/templatengine",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/templatengine.git",
+                "reference": "e7b3d1a5ab4581e0d7f36153346c899ba843440a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/templatengine/zipball/e7b3d1a5ab4581e0d7f36153346c899ba843440a",
+                "reference": "e7b3d1a5ab4581e0d7f36153346c899ba843440a",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/assets-manager": "1.*",
+                "atelierspierrot/library": "1.*",
+                "atelierspierrot/patterns": "1.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "atelierspierrot/gentleface-sprites": "1.*",
+                "phpmd/phpmd": "1.4.*",
+                "sami/sami": "dev-master"
+            },
+            "type": "library-assets",
+            "extra": {
+                "assets-dir": "www",
+                "assets-vendor-dir": "vendor",
+                "document-root": "www",
+                "assets-presets": {
+                    "jquery": {
+                        "js": "top:min:vendor_assets/jquery-last.min.js"
+                    },
+                    "jquery.tablesorter": {
+                        "css": "vendor_assets/blue/style.css",
+                        "jsfiles_footer": [
+                            "vendor_assets/jquery.metadata.js",
+                            "min:vendor_assets/jquery.tablesorter.min.js"
+                        ],
+                        "require": "jquery"
+                    },
+                    "jquery.highlight": {
+                        "css": "vendor_assets/jquery.highlight.css",
+                        "jsfiles_footer": "vendor_assets/jquery.highlight.js",
+                        "require": "jquery"
+                    }
+                },
+                "cache-dir": "tmp",
+                "cache-assets-dir": "tmp_assets",
+                "layouts": "www/html5boilerplate",
+                "views": [
+                    "www",
+                    "www/html5boilerplate"
+                ],
+                "views-functions": "src/TemplateEngine/view_functions.php",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "TemplateEngine": "src",
+                    "Assets": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "A PHP package to build HTML5 views (based on HTML5 Boilerplate layouts).",
+            "homepage": "http://github.com/atelierspierrot/templatengine",
+            "keywords": [
+                "boilerplate",
+                "template engine"
+            ],
+            "time": "2014-03-16 19:34:38"
+        },
+        {
+            "name": "atelierspierrot/validators",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/validators.git",
+                "reference": "c64f719490ce112bd9a0bc0a2b398b3c039ae39c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/validators/zipball/c64f719490ce112bd9a0bc0a2b398b3c039ae39c",
+                "reference": "c64f719490ce112bd9a0bc0a2b398b3c039ae39c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "1.4.*",
+                "phpunit/phpunit": "3.7.*",
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Validator": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "PHP validators for RFC compliance",
+            "homepage": "http://github.com/atelierspierrot/validators",
+            "keywords": [
+                "validator"
+            ],
+            "time": "2013-11-06 21:50:14"
+        },
+        {
+            "name": "atelierspierrot/webfilesystem",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/webfilesystem.git",
+                "reference": "7774a694f02bb1fd4e2832aadcda59590c40b6dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/webfilesystem/zipball/7774a694f02bb1fd4e2832aadcda59590c40b6dd",
+                "reference": "7774a694f02bb1fd4e2832aadcda59590c40b6dd",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/library": "1.*",
+                "atelierspierrot/patterns": "1.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "1.4.*",
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "WebFilesystem": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "Extending the SPL file system to manage webserver based file system (such as assets).",
+            "homepage": "http://github.com/atelierspierrot/webfilesystem",
+            "keywords": [
+                "directory",
+                "file",
+                "spl",
+                "webserver"
+            ],
+            "time": "2014-02-01 10:56:32"
+        },
+        {
+            "name": "atelierspierrot/webservices",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/webservices.git",
+                "reference": "d45a8234d7778ebc5e06dc62a9c0d30104686eea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/webservices/zipball/d45a8234d7778ebc5e06dc62a9c0d30104686eea",
+                "reference": "d45a8234d7778ebc5e06dc62a9c0d30104686eea",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/library": "1.*",
+                "atelierspierrot/markdown-extended": "dev-master",
+                "atelierspierrot/patterns": "1.*",
+                "php": ">=5.3.0",
+                "psr/log": "dev-master"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "1.4.*",
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "WebServices": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
+                },
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "A PHP engine to manage web-services easily",
+            "homepage": "http://github.com/atelierspierrot/webservices",
+            "keywords": [
+                "engine",
+                "webservices"
+            ],
+            "time": "2013-11-06 21:53:04"
+        },
+        {
+            "name": "carte-blanche/core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-carteblanche/core.git",
+                "reference": "1b002738bb2ad94d0ce17269092a23123efdf6e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-carteblanche/core/zipball/1b002738bb2ad94d0ce17269092a23123efdf6e1",
+                "reference": "1b002738bb2ad94d0ce17269092a23123efdf6e1",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/assets-manager": "1.*",
+                "atelierspierrot/devdebug": "1.*",
+                "atelierspierrot/internationalization": "1.*",
+                "atelierspierrot/library": "1.*",
+                "atelierspierrot/mime-mailer": "1.*",
+                "atelierspierrot/patterns": "1.*",
+                "atelierspierrot/templatengine": "1.*",
+                "atelierspierrot/webservices": "1.*",
+                "php": ">=5.3.0",
+                "psr/log": "dev-master"
+            },
+            "require-dev": {
+                "composer/composer": "1.*@dev",
+                "phpmd/phpmd": "1.4.*",
+                "sami/sami": "dev-master"
+            },
+            "type": "carte-blanche-core",
+            "extra": {
+                "views-functions": "src/views_aliases.php",
+                "i18n-dir": "i18n",
+                "doc-dir": "doc",
+                "config-dir": "config",
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "CarteBlanche": "src"
+                },
+                "files": [
+                    "src/CarteBlanche/CarteBlanche.php"
+                ]
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Les Ateliers Pierrot & contributors",
+                    "email": "contact@ateliers-pierrot.fr",
+                    "homepage": "http://www.ateliers-pierrot.fr/"
+                }
+            ],
+            "description": "The core of the PHP MVC framework",
+            "homepage": "http://github.com/php-carteblanche/core",
+            "keywords": [
+                "carte blanche",
+                "framework",
+                "modular",
+                "mvc"
+            ],
+            "support": {
+                "issues": "http://github.com/php-carteblanche/core/issues",
+                "wiki": "http://github.com/php-carteblanche/carteblanche/wiki",
+                "email": "carte-blanche@ateliers-pierrot.fr",
+                "source": "https://github.com/php-carteblanche/core/tree/master"
+            },
+            "time": "2014-03-15 13:49:50"
+        },
+        {
+            "name": "psr/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "a78d6504ff5d4367497785ab2ade91db3a9fbe11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/a78d6504ff5d4367497785ab2ade91db3a9fbe11",
+                "reference": "a78d6504ff5d4367497785ab2ade91db3a9fbe11",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Psr\\Log\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2014-01-18 15:33:09"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "6194137af5f12fbcfc0cb21e269f47542b8beb47"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/6194137af5f12fbcfc0cb21e269f47542b8beb47",
+                "reference": "6194137af5f12fbcfc0cb21e269f47542b8beb47",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-03-03 12:53:01"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "psr/log": 20,
+        "atelierspierrot/markdown-extended": 20,
+        "carte-blanche/core": 20
+    },
+    "platform": {
+        "php": ">=5.3.0"
+    },
+    "platform-dev": [
+
+    ]
+}

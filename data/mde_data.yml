@@ -1,0 +1,209 @@
+
+# strong
+- name: strong
+  type: typo
+  samples:
+    - "**hello**"
+    - "__hello__"
+
+# italic
+- name: italic
+  type: typo
+  samples:
+    - "*hello*"
+    - "_hello_"
+
+# link
+- name: link
+  type: typo
+  samples:
+    - "<http://example.com/>"
+    - "<email@example.com>"
+    - '[an hypertext link](http://example.com/ "Optional link title")'
+
+# anchor
+- name: anchor
+  type: typo
+  samples:
+    - |
+        ## title with anchor {#anchor}
+
+        some text
+
+        a link to [declared anchor](#anchor)
+
+# code
+- name: code
+  type: typo
+  samples:
+    - "`function()`"
+
+# image
+- name: image
+  type: typo
+  samples:
+    - '![Alt text](http://upload.wikimedia.org/wikipedia/commons/5/5a/Wikipedia-logo-v2-fr.png "Optional image title")'
+
+# abbreviation
+- name: abbreviation
+  type: typo
+  samples:
+    - |
+        A paragraph with the word HTML.
+
+        *[HTML]: Hyper-Text Markup Language
+
+# headers
+- name: headers
+  type: typo
+  samples:
+    - |
+        my title level 1
+        ================
+
+        my title level 2
+        ----------------
+    - |
+        # my title level 1
+        ### my title level 3
+
+# horizontal-rule
+- name: horizontal-rule
+  type: typo
+  samples:
+    - "----"
+    - "****"
+    - "____"
+
+# blockquote
+- name: blockquote
+  type: block
+  samples:
+    - |
+        > This is my blockquote
+        > and a second line ...
+    - |
+        > (http://source.com) This is my blockquote
+        > and a second line ...
+
+# pre-formated
+- name: pre-formated
+  type: block
+  samples:
+    - |
+            // this is my "pre" block
+            $var = val_fct();
+    - |
+        ~~~~
+        My code here
+        ~~~~
+    - |
+        ~~~~html
+        My code here
+        ~~~~
+
+# definitions-list
+- name: definitions-list
+  type: block
+  samples:
+    - |
+        Word
+        :   Definition content (first one)
+            with a two-lines text
+
+        :   Second definition for this term...
+
+# unordered-list
+- name: unordered-list
+  type: block
+  samples:
+    - |
+        -   first item
+        -   second item
+    - |
+        +   first item
+        +   second item
+    - |
+        *   first item
+        *   second item
+
+# ordered-list
+- name: ordered-list
+  type: block
+  samples:
+    - |
+        1.   first item
+        1.   second item
+
+# paragraph
+- name: paragraph
+  type: block
+  samples:
+    - |
+        This is my first paragraph.
+
+        And this is my second,
+        on two lines ...
+
+# table
+- name: table
+  type: block
+  samples:
+    - |
+        | First Header  | Second Header | Third Header |
+        | ------------- | ------------: | :----------: |
+        | Content Cell  | Content right-aligned | Content center-aligned |
+        | Content Cell  | Content on two columns ||
+
+# footnote
+- name: footnote
+  type: block
+  samples:
+    - |
+        A paragraph with a footnote[^footnote_one] note.
+
+        [^footnote_one]: Footnote content
+    - |
+        A paragraph with a referenced glossary term[^myterm] ...
+
+        [^myterm]: glossary: the term defined (an optional sort key)
+        The term definition ... which may be multi-line.
+    - |
+        This is a statement that should be attributed to its source [p. 23][#Doe:2006].
+
+        [#Doe:2006]: John Doe. *Some Big Fancy Book*.  Vanity Press, 2006.
+
+# references
+- name: references
+  type: misc
+  samples:
+    - |
+        A paragraph with a referenced [hypertext link][myid] and some more text embedding an
+        image: ![image for the test][myimage].
+
+        [myid]: http://example.com/ "Optional link title"
+        [myimage]: http://example.com/test.com "Optional image title" width=40px height=40px
+
+# escaping
+- name: escaping
+  type: misc
+  samples:
+    - "\\\ backslash"
+    - "\\. dot"
+    - "\\! exclamation point"
+    - "\\# hash mark"
+    - "\\* asterisk"
+    - "\\+ plus sign"
+    - "\\- hyphen"
+    - "\\_ underscore"
+    - "\\` backtick quote"
+    - "\\(\\) parentheses"
+    - "\\[\\] brackets"
+    - "\\{\\} curly brackets"
+
+# inclusion
+- name: inclusion
+  type: misc
+  samples:
+    - "<!-- @inclusion-test.md@ -->"
+    - "<!-- @not-found.md@ -->"
