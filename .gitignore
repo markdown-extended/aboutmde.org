@@ -23,7 +23,6 @@ Desktop.ini
 
 # various
 *tmp*
-*/var/*
+var/*
+dev/*
 */vendor/*
-*/dev/*
-*/build/*
