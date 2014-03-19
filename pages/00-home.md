@@ -30,48 +30,23 @@ process: phpize
 
 <div class="row">
     <div class="col-xs-12 col-md-6">
-
-<h2 class="nobefore"><i class="fa fa-quote-right"></i>&nbsp;About</h2>
-<p>
-    <strong>Markdown</strong> is a set of writing rules to build some human readable text contents, such as <code>.txt</code> common files, which can be parsed to build some HTML valid content, structurally and typographically. The first idea was from <a href="http://daringfireball.net/" title="http://daringfireball.net/">John Gruber</a>, coded in <em>Perl</em> script.
-</p>
-<p>
-    <strong>Markdown</strong> has become one of the most common standards of rich-text contents, used for example by <a href="http://github.com" title="http://github.com">GitHub</a> as one of the proposed syntaxes for informational files.
-</p>
-
+        <h2 class="nobefore"><i class="fa fa-quote-right"></i>&nbsp;About</h2>
+        <?php _markdownify(file_get_contents(__DIR__.'/00-home/about.md')); ?>
     </div>
     <div class="col-xs-12 col-md-6">
-
-<h2 class="nobefore"><i class="fa fa-github"></i>&nbsp;Sources</h2>
-
-<ul class="gh-buttons">
-  <li><a href="https://github.com/atelierspierrot/markdown-extended-doc/zipball/master">Download <strong>ZIP File</strong></a></li>
-  <li><a href="https://github.com/atelierspierrot/markdown-extended-doc/tarball/master">Download <strong>TAR Ball</strong></a></li>
-  <li><a href="https://github.com/atelierspierrot/markdown-extended-doc">View On <strong>GitHub</strong></a></li>
-</ul>
-
+        <h2 class="nobefore"><i class="fa fa-users"></i>&nbsp;Open source</h2>
+        <?php _markdownify(file_get_contents(__DIR__.'/00-home/open-source.md')); ?>
     </div>
 </div>
 
 <div class="row">
     <div class="col-xs-12 col-md-6">
-
-<h2 class="nobefore"><i class="fa fa-users"></i>&nbsp;Open source</h2>
-<p>
-    The sources of the <code title="PHP package">MarkdownExtended</code> package are hosted on <a href="http://github.com" title="See online github.com">GitHub</a>.
-</p>
-<p>
-    To participate, follow sources updates, report a bug or read opened bug tickets and any other information, please see the GitHub repository <a href="http://github.com/atelierspierrot/markdown-extended" title="http://github.com/atelierspierrot/markdown-extended">atelierspierrot/markdown-extended</a>.
-</p>
-
+        <h2 class="nobefore"><i class="fa fa-pencil-square-o"></i>&nbsp;Syntax's rules</h2>
+        <?php _markdownify(file_get_contents(__DIR__.'/00-home/syntax.md')); ?>
     </div>
     <div class="col-xs-12 col-md-6">
-
-<h2 class="nobefore"><i class="fa fa-cogs"></i>&nbsp;Full set of options</h2>
-<p>
-    The <strong>Markdown Extended</strong> version handles a large set of options to fit different needs.
-</p>
-
+        <h2 class="nobefore"><i class="fa fa-cogs"></i>&nbsp;Implementations API</h2>
+        <?php _markdownify(file_get_contents(__DIR__.'/00-home/api.md')); ?>
     </div>
 </div>
 

@@ -10,3 +10,9 @@ if (file_exists($manifest_f)) {
 }
 
 ?>
+
+<br class="clearfix" />
+<div class="well">
+    These specifications are maintained as a standalone GIT repository at: 
+    <a href="<?php _echo(findManifestHome()); ?>" title="<?php _echo(findManifestHome()); ?>"><?php _echo(findManifestHome()); ?></a>.
+</div>

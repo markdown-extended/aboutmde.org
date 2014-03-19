@@ -124,6 +124,8 @@
 </footer>
 
 <script src="jquery/latest.min.js"></script>
+<script src="jquery/bindWithDelay.js"></script>
+<script src="jquery/jquery.filtertable.custom.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
 <script>

@@ -19,8 +19,17 @@ class Controller
 	    self::$views_dir = __DIR__.'/../views/';
 	    self::$template = self::$views_dir.'layout.html.php';
 
+        // this
+        $this->set('about_mde', $this);
+
         // current url/uri
         $this->set('request', \Library\Helper\Url::getRequestUrl());
+        
+        // 'q' request for a search query ?
+        $_q = CarteBlanche::getContainer()->get('request')->getArgument('q');
+        if (!empty($_q)) {
+            $this->set('search_query', $_q);
+        }
 
         // creating the Markdown parser
         $mde_config = CarteBlanche::getConfig('markdown', array());
@@ -139,6 +148,7 @@ class Controller
         $_f = CarteBlanche::getFullPath('storage_data').'/'.str_replace('.yml', '', $file).'.yml';
         if (file_exists($_f)) {
             $yml = Yaml::parse($_f);
+            $this->set($file, $yml);
             return $yml;
         } else {
             throw new \ErrorException(
@@ -160,7 +170,7 @@ class Controller
             $page = array(
                 'name'      =>$this->buildFilename($_f),
                 'content'   =>$mde->getBody(),
-                'notes'     =>$mde->getFootnotes(),
+                'footnotes' =>$mde->getFootnotes(),
                 'metas'     =>$mde->getMetaData(),
                 'toc'       =>$output_bag->getHelper()->getToc($mde, $output_bag->getFormater()),
                 'date'      =>$date->setTimestamp(filemtime($_f)),
@@ -171,20 +181,28 @@ class Controller
                     $page['name'] = $page['metas']['title'];
                 }
                 if (isset($page['metas']['data'])) {
-                    $page['data'][$page['metas']['data']] = $this->parseData($page['metas']['data']);
+                    $data_stack = explode(',', $page['metas']['data']);
+                    foreach ($data_stack as $data) {
+                        $page['data'][$data] = $this->parseData($data);
+                    }
                 }
                 if (isset($page['metas']['process'])) {
-                    $_meth = $page['metas']['process'];
-                    if (method_exists($this, $_meth)) {
-                        $page_content = call_user_func(
-                            array($this, $_meth),
-                            $_f,
-                            array('page'=>$page)
-                        );
-                        $mde_bis           = $mde_parser->transformString($page_content);
-                        $page['content']   = $mde_bis->getBody();
-                        $page['notes']     = $mde_bis->getFootnotes();
-                        $page['toc']       = $output_bag->getHelper()->getToc($mde_bis, $output_bag->getFormater());
+                    $meths_stack = explode(',', $page['metas']['process']);
+                    foreach ($meths_stack as $_meth) {
+                        $_meth = $page['metas']['process'];
+                        if (method_exists($this, $_meth)) {
+                            $page_content = call_user_func(
+                                array($this, $_meth),
+                                $_f,
+                                array_merge($this->_registry, array('page'=>$page))
+                            );
+                            if (!empty($page_content) && is_string($page_content)) {
+                                $mde_bis           = $mde_parser->transformString($page_content);
+                                $page['content']   = $mde_bis->getBody();
+                                $page['footnotes'] = $mde_bis->getFootnotes();
+                                $page['toc']       = $output_bag->getHelper()->getToc($mde_bis, $output_bag->getFormater());
+                            }
+                        }
                     }
                 }
             }
@@ -196,11 +214,22 @@ class Controller
         return $page;
     }
 
+    public function getCheatSheet()
+    {
+        $data = $this->get('mde_data');
+        $cheat_sheet = new CheatSheet(CarteBlanche::getContainer()->get('mde'));
+        foreach ($data as $i=>$item) {
+            $cheat_sheet->addItem($item);
+        }        
+        $this->set('cheat_sheet', $cheat_sheet);
+        return $cheat_sheet;
+    }
+    
 // ---------------------
 // Statics
 // ---------------------
     
-    public function findModule($module)
+    public static function findModule($module)
     {
         $src = CarteBlanche::getFullPath('storage_modules').'/'.$module;
         if (file_exists($src)) {
@@ -210,6 +239,24 @@ class Controller
         } else {
             throw new \ErrorException(
                 sprintf("Git submodule '%s' not found!", $module)
+            );
+        }
+    }
+
+    public static function findManifest()
+    {
+        $cfg = CarteBlanche::getConfig('aboutmde');
+        if (empty($cfg)) {
+            throw new \ErrorException(
+                sprintf("Configuration entry '%s' not found!", 'aboutmde')
+            );
+        }
+        $src = Controller::findModule('manifest').'/'.$cfg['manifest_name'];
+        if (file_exists($src)) {
+            return $src;
+        } else {
+            throw new \ErrorException(
+                sprintf("Manifest file '%s' not found!", $src)
             );
         }
     }
