@@ -1,1 +1,1 @@
-This website proposes a basic API to develop in *Markdown Extended* syntax parsers implementations.
+This website proposes a basic API to develop *Markdown Extended* syntax parsers implementations.

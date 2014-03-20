@@ -1,1 +1,1 @@
-This website proposes a basic API to develop in *Markdown Extended* syntax parsers implementations.
+The **MDE's specifications** are written in the [MDE manifest](02-manifest.html).

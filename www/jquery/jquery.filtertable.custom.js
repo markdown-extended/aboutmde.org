@@ -51,7 +51,8 @@
 				quickListGroupTag: '',                  // tag surrounding quick list items (e.g., ul)
 				quickListTag:      'a',                 // tag type of each quick list item (e.g., a or li)
 				visibleClass:      'visible',           // class applied to visible rows
-				filterContainer: 	null				// id of an existing filter container 
+				filterContainer: 	null,				// id of an existing filter container 
+				quickListContainer: null				// id of an existing quick list container 
 			},
 			hsc = function(text) { // mimic PHP's htmlspecialchars() function
 				return text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -134,7 +135,11 @@
 				    doFiltering(t, filter.val());
 				}
 				if (settings.quickList.length>0) { // are there any quick list items to add?
-					quicks = settings.quickListGroupTag ? $('<'+settings.quickListGroupTag+' />') : container;
+                    if (settings.quickListContainer!==null && $(settings.quickListContainer).length>0) {
+    					quicks = $(settings.quickListContainer); // get the existing container tag for the quick list
+                    } else {
+    					quicks = settings.quickListGroupTag ? $('<'+settings.quickListGroupTag+' />') : container;
+                    }
 					$.each(settings.quickList, function(index, value) { // for each quick list item...
 						var q = $('<'+settings.quickListTag+' class="'+settings.quickListClass+'" />'); // build the quick list item link
 						q.text(hsc(value)); // add the item's text
@@ -145,9 +150,12 @@
 							e.preventDefault(); // stop the normal anchor tag behavior from happening
 							filter.val(value).focus().trigger('click'); // send the quick list value over to the filter field and trigger the event
 						});
+						
+						console.debug(quicks);
+						
 						quicks.append(q); // add the quick list link to the quick list groups container
 					}); // each quick list item
-					if (quicks!==container) {
+					if (quicks!==container && (settings.quickListContainer===null || $(settings.quickListContainer).length==0)) {
 						container.append(quicks); // add the quick list groups container to the DOM if it isn't already there
 					}
 				} // if quick list items

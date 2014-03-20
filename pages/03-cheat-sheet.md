@@ -6,7 +6,9 @@ $cheat_sheet = $about_mde->getCheatSheet();
 $cheat_sheet->parseData();
 ?>
 
-<h1>Markdown Extended syntax cheat sheet</h1>
+<h1>MDE syntax cheat sheet</h1>
+
+<p class="lead">The table below lists all Markdown Extended syntax rules with examples. You can use the search field to filter table entries, or the selector to reach a specific section.</p>
 
 <br class="clearfix">
 <div class="row">
@@ -16,8 +18,8 @@ $cheat_sheet->parseData();
 <span class="fa fa-search" id="tableFilter-icon-empty"></span>
 <a href="#" title="Empty this search field" id="tableFilter-icon-filled"><span class="fa fa-times"></span></a>
 <input type="search" name="filter-table" id="tableFilter" class="form-control search-query" placeholder="Filter table values" title="Type a string to filter table entries" tabindex="1" value="<?php if (!empty($search_query)) _echo($search_query); ?>">
+<p class="help-block">Presets: <span id="quick-list-container"></span></p>
 </form>
-<p class="help-block"></p>
 </div>
 <div class="col-xs-12 col-sm-6">
 <select class="form-control" id="gotoSelector">
@@ -31,7 +33,7 @@ $cheat_sheet->parseData();
 <br class="clearfix">
 
 <div class="table-responsive">
-    <table class="table table-striped table-bordered table-hover tablesorter tablefiltrable">
+    <table class="table table-striped table-bordered table-hover tablefiltrable">
     <thead>
     <tr>
         <th>Type</th>
@@ -118,7 +120,8 @@ $(function() {
     $('.tablefiltrable').filterTable({
         filterContainer: '#filter-field',
         inputName:       'filter-table',
-        quickList:      ['typographic', 'block', 'miscellaneous']
+        quickList:      ['typographic', 'block', 'miscellaneous'],
+        quickListContainer:'#quick-list-container'
     });
 });
 "));

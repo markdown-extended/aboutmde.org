@@ -34,15 +34,15 @@ process: phpize
         <?php _markdownify(file_get_contents(__DIR__.'/00-home/about.md')); ?>
     </div>
     <div class="col-xs-12 col-md-6">
-        <h2 class="nobefore"><i class="fa fa-users"></i>&nbsp;Open source</h2>
-        <?php _markdownify(file_get_contents(__DIR__.'/00-home/open-source.md')); ?>
+        <h2 class="nobefore"><i class="fa fa-pencil-square-o"></i>&nbsp;Syntax's rules</h2>
+        <?php _markdownify(file_get_contents(__DIR__.'/00-home/syntax.md')); ?>
     </div>
 </div>
 
 <div class="row">
     <div class="col-xs-12 col-md-6">
-        <h2 class="nobefore"><i class="fa fa-pencil-square-o"></i>&nbsp;Syntax's rules</h2>
-        <?php _markdownify(file_get_contents(__DIR__.'/00-home/syntax.md')); ?>
+        <h2 class="nobefore"><i class="fa fa-users"></i>&nbsp;Open source</h2>
+        <?php _markdownify(file_get_contents(__DIR__.'/00-home/open-source.md')); ?>
     </div>
     <div class="col-xs-12 col-md-6">
         <h2 class="nobefore"><i class="fa fa-cogs"></i>&nbsp;Implementations API</h2>
@@ -50,7 +50,10 @@ process: phpize
     </div>
 </div>
 
-<p>This project is maintained by <a href="https://github.com/atelierspierrot" title="github.com/atelierspierrot">@atelierspierrot</a></p>
+<br class="clearfix">
+<div class="well">
+    <p>This project is maintained by <a href="https://github.com/pierowbmstr" title="github.com/pierowbmstr">@pierowbmstr</a>.</p>
+</div>
 
 <?php
 $_template->getTemplateObject('JavascriptTag')->set(array("
