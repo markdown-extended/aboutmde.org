@@ -20,7 +20,6 @@
     },
     "minimum-stability": "dev",
     "config": {
-        "bin-dir": "bin",
         "vendor-dir": "src/vendor"
     },
     "extra": {

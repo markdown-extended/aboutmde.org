@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "146946822eaa256904994c13ab715c26",
+    "hash": "adf89408c3a2df4df67ca142e7b0e6b2",
     "packages": [
         {
             "name": "atelierspierrot/assets-library",
@@ -1072,15 +1072,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-carteblanche/core.git",
-                "reference": "1b002738bb2ad94d0ce17269092a23123efdf6e1"
+                "reference": "6658402e191006336002a9fc5e6d0e710eb3ba01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-carteblanche/core/zipball/1b002738bb2ad94d0ce17269092a23123efdf6e1",
-                "reference": "1b002738bb2ad94d0ce17269092a23123efdf6e1",
+                "url": "https://api.github.com/repos/php-carteblanche/core/zipball/6658402e191006336002a9fc5e6d0e710eb3ba01",
+                "reference": "6658402e191006336002a9fc5e6d0e710eb3ba01",
                 "shasum": ""
             },
             "require": {
+                "atelierspierrot/assets-library": "1.*",
                 "atelierspierrot/assets-manager": "1.*",
                 "atelierspierrot/devdebug": "1.*",
                 "atelierspierrot/internationalization": "1.*",
@@ -1099,7 +1100,7 @@
             },
             "type": "carte-blanche-core",
             "extra": {
-                "views-functions": "src/views_aliases.php",
+                "views-functions": "src/views_functions.php",
                 "i18n-dir": "i18n",
                 "doc-dir": "doc",
                 "config-dir": "config",
@@ -1115,6 +1116,7 @@
                     "src/CarteBlanche/CarteBlanche.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -1133,13 +1135,7 @@
                 "modular",
                 "mvc"
             ],
-            "support": {
-                "issues": "http://github.com/php-carteblanche/core/issues",
-                "wiki": "http://github.com/php-carteblanche/carteblanche/wiki",
-                "email": "carte-blanche@ateliers-pierrot.fr",
-                "source": "https://github.com/php-carteblanche/core/tree/master"
-            },
-            "time": "2014-03-15 13:49:50"
+            "time": "2014-03-20 20:59:56"
         },
         {
             "name": "psr/log",
