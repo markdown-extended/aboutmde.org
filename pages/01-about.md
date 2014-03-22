@@ -27,10 +27,11 @@ files (such like this one).
 
 ### A short history of Markdown
 
-The first idea was from [John Gruber](http://daringfireball.net/), coded in *Perl* script.
+The original Markdown idea and the very first parser was made by
+[John Gruber](http://daringfireball.net/), coded in *Perl* script.
 
-An extended implementation, known as **Markdown Extra**, has been written by [Michel Fortin](http://michelf.com/),
-coded in *PHP* script.
+An extended implementation, known as **Markdown Extra**, has been written by
+[Michel Fortin](http://michelf.com/), coded in *PHP* script.
 
 Another extended implementation, known as **Multi Markdown**, has been written by 
 [Fletcher T. Penney](http://fletcherpenney.net/), coded in *Perl* script.
@@ -50,10 +51,15 @@ and built with the help of the following open source tools and applications:
     [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0) ;
 -   [Bootstrap](http://getbootstrap.com), a front-end web framework created by 
     [@mdo](http://twitter.com/mdo) and [@fat](http://twitter.com/fat) and licensed under
-    [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE) ;
+    [MIT](http://github.com/twbs/bootstrap/blob/master/LICENSE) ;
 -   [Font Awesome](http://fortawesome.github.io/Font-Awesome/), an iconic font style created
     by [Dave Gandy](http://twitter.com/davegandy) and licensed under 
     [SIL Open Font License](http://scripts.sil.org/OFL) ;
-
-
-    
+-   [jQuery](http://jquery.com/), a javascript library created by [John Resig](http://ejohn.org/)
+    and licensed under [MIT license](http://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt) ;
+-   the [bindWithDelay](http://github.com/bgrins/bindWithDelay) jQuery plugin by
+    [Brian Grinstead](http://briangrinstead.com/) licensed under [MIT 
+    License](http://www.opensource.org/licenses/mit-license.php) ;
+-   the [filterTable](http://github.com/sunnywalker/jQuery.FilterTable) jQuery plugin by 
+    [Sunny Walker](http://plus.google.com/+SunnyWalker) licensed under [MIT 
+    License](http://www.opensource.org/licenses/mit-license.php) ;
