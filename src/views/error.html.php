@@ -98,11 +98,7 @@
 
                 <?php if ($page['footnotes']) : ?>
                 <div class="footnotes">
-                    <ol>
-                    <?php foreach ($page['footnotes'] as $id=>$note_content) {
-                        _echo('<li id="'.$note_content['note-id'].'">'.$note_content['text'].'</li>');
-                    } ?>
-                    </ol>
+                    <?php _echo($page['footnotes']); ?>
                 </div>
                 <?php endif; ?>
 

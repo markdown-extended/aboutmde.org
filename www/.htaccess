@@ -1,17 +1,5 @@
-########################################################################
-# DocBook                                                              #
-# Copyright (c) 2012 Pierre Cassat                                     #
-# http://www.ateliers-pierrot.fr - contact@ateliers-pierrot.fr         #
-########################################################################
-
-# no indexing
 Options -Indexes +FollowSymLinks
 
-# setting the default DocBook markdown handler for each `.md` files
-# and the INCLUDES functionality
-AddType text/html .md
-
-# the rewrite URLs rules
 RewriteEngine On
 #RewriteBase /
 

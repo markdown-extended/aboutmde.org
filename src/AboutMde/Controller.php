@@ -4,6 +4,9 @@ namespace AboutMde;
 
 use \CarteBlanche\CarteBlanche;
 use \CarteBlanche\Abstracts\AbstractController;
+use \CarteBlanche\Exception\NotFoundException;
+use \CarteBlanche\Exception\InternalServerErrorException;
+use \CarteBlanche\App\Response;
 use \Symfony\Component\Yaml\Yaml;
 use \MarkdownExtended\MarkdownExtended;
 
@@ -65,7 +68,14 @@ class Controller
 
         // page data
         $this->set('route', $page_name);
-        $this->set('page', $this->getPage($page_name));
+        try {
+            $page = $this->getPage($page_name);
+        } catch (NotFoundException $e) {
+            return $this->errorAction($e, 404);
+        } catch (InternalServerErrorException $e) {
+            return $this->errorAction($e, 500);
+        }
+        $this->set('page', $page);
 
         // output
 		return array_merge($this->_registry, array('output'=>''));
@@ -82,8 +92,14 @@ class Controller
             default:
                 $message = '<h1>We are sorry, but something went terribly wrong.</h1>';
         }
+        return CarteBlanche::getContainer()->get('front_controller')
+            ->renderProductionError($message, $code);
         $message .= '<p>'.$e->getMessage().'</p>'
                     .'<pre>'.$e->getTraceAsString().'</pre>';
+
+var_export($message);
+exit('yo');
+
         return new Response($message);
     }
 
@@ -109,11 +125,11 @@ class Controller
             } elseif (is_numeric($this->_registry[$var])) {
                 $this->_registry[$var] += intval($val);
             } elseif (is_object($this->_registry[$var])) {
-                throw new \Exception(
+                throw new InternalServerErrorException(
                     sprintf("Can not extend object (object of class '%s')", get_class($this->_registry[$var]))
                 );
             } else {
-                throw new \Exception(
+                throw new InternalServerErrorException(
                     sprintf("Unknown type to extend (typed '%s')", gettype($this->_registry[$var]))
                 );
             }
@@ -151,7 +167,7 @@ class Controller
             $this->set($file, $yml);
             return $yml;
         } else {
-            throw new \ErrorException(
+            throw new InternalServerErrorException(
                 sprintf("Data file '%s' not found!", $file)
             );
         }
@@ -207,7 +223,7 @@ class Controller
                 }
             }
         } else {
-            throw new \Exception(
+            throw new NotFoundException(
                 sprintf("Page '%s' not found!", $file), 400
             );
         }
@@ -237,7 +253,7 @@ class Controller
         } elseif (file_exists($src.'.git')) {
             return $src.'.git';
         } else {
-            throw new \ErrorException(
+            throw new InternalServerErrorException(
                 sprintf("Git submodule '%s' not found!", $module)
             );
         }
@@ -247,7 +263,7 @@ class Controller
     {
         $cfg = CarteBlanche::getConfig('aboutmde');
         if (empty($cfg)) {
-            throw new \ErrorException(
+            throw new InternalServerErrorException(
                 sprintf("Configuration entry '%s' not found!", 'aboutmde')
             );
         }
@@ -255,7 +271,7 @@ class Controller
         if (file_exists($src)) {
             return $src;
         } else {
-            throw new \ErrorException(
+            throw new InternalServerErrorException(
                 sprintf("Manifest file '%s' not found!", $src)
             );
         }

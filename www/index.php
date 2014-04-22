@@ -30,24 +30,25 @@ define('_ROOTPATH', realpath(dirname(__FILE__)) == DIRECTORY_SEPARATOR ?
 );
 
 // _ROOTHTTP : the base URL to use to construct the application routes (found from the current domain and path URL)
-if (!defined('_ROOTHTTP')) {
-    $_roothttp = '';
-    if (isset($_SERVER['HTTP_HOST']) && !empty($_SERVER['HTTP_HOST'])) {
-        $_roothttp = (isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS'])!='off') ? 'https://' : 'http://';
-        $_roothttp .= $_SERVER['HTTP_HOST'];
-    }
-    if (isset($_SERVER['PHP_SELF']) && !empty($_SERVER['PHP_SELF'])) {
-        $_roothttp .= str_replace( '\\', '/', dirname($_SERVER['PHP_SELF']));
-    }
-    if (strlen($_roothttp)>0 && substr($_roothttp, -1) != '/') $_roothttp .= '/';
-    define('_ROOTHTTP', $_roothttp);
+$_roothttp = '';
+if (isset($_SERVER['HTTP_HOST']) && !empty($_SERVER['HTTP_HOST'])) {
+    $_roothttp = (isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS'])!='off') ? 'https://' : 'http://';
+    $_roothttp .= $_SERVER['HTTP_HOST'];
 }
+if (isset($_SERVER['PHP_SELF']) && !empty($_SERVER['PHP_SELF'])) {
+    $_roothttp .= str_replace( '\\', '/', dirname($_SERVER['PHP_SELF']));
+}
+if (strlen($_roothttp)>0 && substr($_roothttp, -1) != '/') $_roothttp .= '/';
+define('_ROOTHTTP', $_roothttp);
 
 // the application
 $main = \CarteBlanche\App\Kernel::create(
     __DIR__.'/../src/config/about-mde.ini', 
     null, 
-    ((isset($_SERVER['REMOTE_ADDR']) && in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1','localhost'))) ? 'dev' : 'prod')
+    ((isset($_SERVER['REMOTE_ADDR']) && in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1','localhost'))) ? 
+        (!empty($_GET) && isset($_GET['mode']) ? $_GET['mode'] : 'dev')
+        : 'prod'
+    )
 )
 ->distribute();
 

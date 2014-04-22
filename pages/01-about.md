@@ -37,14 +37,15 @@ Another extended implementation, known as **Multi Markdown**, has been written b
 [Fletcher T. Penney](http://fletcherpenney.net/), coded in *Perl* script.
 
 Many other implementations exists for the syntax, with their own rules and tags. This is
-the reason why we try to unformize and universalize these rules in this **Markdown Extended**
+the reason why we try to uniformize and universalize these rules in this **Markdown Extended**
 specifications.
 
 
 ## Website credits
 
 The [aboutmde.org](http://aboutmde.org/) website is maintained by [Pierre Cassat](http://github.com/pierowbmstr/)
-and built with the help of the following open source tools and applications:
+(*aka* [@pierowbmstr](http://github.com/pierowbmstr/)) and built with the help of the following open source tools
+and applications:
 
 -   [Carte Blanche](http://github.com/php-carteblanche/), a PHP framework created by 
     [Les Ateliers Pierrot](http://www.ateliers-pierrot.fr/) and licensed under the
@@ -63,3 +64,5 @@ and built with the help of the following open source tools and applications:
 -   the [filterTable](http://github.com/sunnywalker/jQuery.FilterTable) jQuery plugin by 
     [Sunny Walker](http://plus.google.com/+SunnyWalker) licensed under [MIT 
     License](http://www.opensource.org/licenses/mit-license.php) ;
+
+The icon used by aboutmde.org has been made by [Dustin Curtis](http://dcurt.is/the-markdown-mark).
