@@ -4,3 +4,11 @@ home:           http://aboutmde.org/
 sources:        http://github.com/markdown-extended/aboutmde.org
 author:         About MDE & contributors
 contact:        info@aboutmde.org
+menu-icons:
+    00-home.md: home
+    01-about.md: quote-right
+    02-manifest.md: book
+    03-cheat-sheet.md: dashboard
+    04-writers-doc.md: pencil-square
+    05-developers-doc.md: file-text
+    06-downloads.md: cogs

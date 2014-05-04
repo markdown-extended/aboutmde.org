@@ -40,6 +40,8 @@ class Controller
 
         // website data
         $this->set('website', $this->parseData('website'));
+        $website = $this->get('website');
+        $icons = $website['menu-icons'];
 
         // pages list
         $pages_dir = new \DirectoryIterator(CarteBlanche::getFullPath('storage_pages'));
@@ -49,6 +51,7 @@ class Controller
             $pages[$file->getFilename()] = array(
                 'name'=>$this->buildFilename($file),
                 'path'=>str_replace($file->getExtension(), 'html', $file->getFilename()),
+                'icon'=>array_key_exists($file->getFilename(), $icons) ? $icons[$file->getFilename()] : null,
             );
         }
         $this->set('pages', $pages);
@@ -186,7 +189,7 @@ exit('yo');
             $page = array(
                 'name'      =>$this->buildFilename($_f),
                 'content'   =>$mde->getBody(),
-                'footnotes' =>$mde->getFootnotes(),
+                'notes'     =>$mde->getNotes(),
                 'metas'     =>$mde->getMetaData(),
                 'toc'       =>$output_bag->getHelper()->getToc($mde, $output_bag->getFormater()),
                 'date'      =>$date->setTimestamp(filemtime($_f)),
@@ -215,7 +218,7 @@ exit('yo');
                             if (!empty($page_content) && is_string($page_content)) {
                                 $mde_bis           = $mde_parser->transformString($page_content);
                                 $page['content']   = $mde_bis->getBody();
-                                $page['footnotes'] = $mde_bis->getFootnotes();
+                                $page['notes']     = $mde_bis->getNotes();
                                 $page['toc']       = $output_bag->getHelper()->getToc($mde_bis, $output_bag->getFormater());
                             }
                         }

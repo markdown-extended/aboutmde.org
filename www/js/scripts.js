@@ -201,6 +201,15 @@ function activateNavigationMenu() {
     }
 }
 
+function scrollToAnchor(href) {
+    href = typeof(href) == "string" ? href : $(this).attr("href");
+    if (!href) return; if (href.charAt(0) == "#") {
+        var $target = $(href); if ($target.length) {
+            $('html, body').animate({ scrollTop: $target.offset().top - 70 }, "slow");
+            if (history && "pushState" in history) { history.pushState({}, document.title, window.location.pathname + href); }
+        }
+    }
+}
 function getToHash(){
     var _hash = window.location.hash;
     if (_hash!==undefined) {
