@@ -3,8 +3,66 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "adf89408c3a2df4df67ca142e7b0e6b2",
+    "hash": "8e1967e0d703039693cc43ccdab965e0",
     "packages": [
+        {
+            "name": "atelierspierrot/assets-bootstrapper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atelierspierrot/assets-bootstrapper.git",
+                "reference": "4f28ddf1d0d4d27b69648669ad7034de45635427"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atelierspierrot/assets-bootstrapper/zipball/4f28ddf1d0d4d27b69648669ad7034de45635427",
+                "reference": "4f28ddf1d0d4d27b69648669ad7034de45635427",
+                "shasum": ""
+            },
+            "require": {
+                "atelierspierrot/assets-manager": "1.*",
+                "atelierspierrot/templatengine": "1.*"
+            },
+            "type": "library-assets",
+            "extra": {
+                "assets-dir": "www",
+                "assets-vendor-dir": "vendor",
+                "document-root": "demo",
+                "layouts": "www/layouts",
+                "views": "www/layouts",
+                "assets-presets": {
+                    "jquery-cdn": {
+                        "jsfiles_footer": "//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+                    },
+                    "bootstrap": {
+                        "css": "bootstrap/css/bootstrap.min.css",
+                        "jsfiles_footer": "bootstrap/js/bootstrap.min.js",
+                        "require": [
+                            "jquery-cdn",
+                            "font-awesome"
+                        ]
+                    },
+                    "bootstrap-theme": {
+                        "css": "last:bootstrap/css/bootstrap-theme.min.css",
+                        "require": "bootstrap"
+                    },
+                    "font-awesome": {
+                        "css": "font-awesome/css/font-awesome.min.css"
+                    }
+                },
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "The Bootstrap & Font-Awesome libraries ready to use with the atelierspierrot/template-engine",
+            "homepage": "http://github.com/atelierspierrot/assets-bootstrapper",
+            "keywords": [
+                "bootstrap",
+                "font-awesome"
+            ],
+            "time": "2014-05-04 14:17:19"
+        },
         {
             "name": "atelierspierrot/assets-library",
             "version": "dev-master",
@@ -560,12 +618,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/library.git",
-                "reference": "b71101117baa6cc279821499bbf9c5215115367d"
+                "reference": "c4a6c5ce15150b1d670933ded704f97d9e218082"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/library/zipball/b71101117baa6cc279821499bbf9c5215115367d",
-                "reference": "b71101117baa6cc279821499bbf9c5215115367d",
+                "url": "https://api.github.com/repos/atelierspierrot/library/zipball/c4a6c5ce15150b1d670933ded704f97d9e218082",
+                "reference": "c4a6c5ce15150b1d670933ded704f97d9e218082",
                 "shasum": ""
             },
             "require": {
@@ -610,7 +668,7 @@
                 "helpers",
                 "library"
             ],
-            "time": "2014-02-01 11:28:23"
+            "time": "2014-03-25 06:24:37"
         },
         {
             "name": "atelierspierrot/markdown-extended",
@@ -749,12 +807,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/patterns.git",
-                "reference": "5bcdff59e94f6fe4e3388da1340f884f51749899"
+                "reference": "cc1a818fdb750e0699f8e87db3dfc4fea7309017"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/patterns/zipball/5bcdff59e94f6fe4e3388da1340f884f51749899",
-                "reference": "5bcdff59e94f6fe4e3388da1340f884f51749899",
+                "url": "https://api.github.com/repos/atelierspierrot/patterns/zipball/cc1a818fdb750e0699f8e87db3dfc4fea7309017",
+                "reference": "cc1a818fdb750e0699f8e87db3dfc4fea7309017",
                 "shasum": ""
             },
             "require": {
@@ -798,7 +856,7 @@
                 "patterns",
                 "php"
             ],
-            "time": "2013-11-06 21:46:15"
+            "time": "2014-03-25 06:25:43"
         },
         {
             "name": "atelierspierrot/templatengine",
@@ -1187,12 +1245,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "6194137af5f12fbcfc0cb21e269f47542b8beb47"
+                "reference": "e9525fc511a51e7bfa214c6c420515c580fda35a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/6194137af5f12fbcfc0cb21e269f47542b8beb47",
-                "reference": "6194137af5f12fbcfc0cb21e269f47542b8beb47",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/e9525fc511a51e7bfa214c6c420515c580fda35a",
+                "reference": "e9525fc511a51e7bfa214c6c420515c580fda35a",
                 "shasum": ""
             },
             "require": {
@@ -1227,7 +1285,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-03-03 12:53:01"
+            "time": "2014-04-18 20:40:13"
         }
     ],
     "packages-dev": [
