@@ -16,11 +16,11 @@ class Controller
 
     protected $_registry    = array();
 
-	protected function init()
-	{
-	    // views
-	    self::$views_dir = __DIR__.'/../views/';
-	    self::$template = self::$views_dir.'layout.html.php';
+    protected function init()
+    {
+        // views
+        self::$views_dir = __DIR__.'/../views/';
+        self::$template = self::$views_dir.'layout.html.php';
 
         // this
         $this->set('about_mde', $this);
@@ -54,20 +54,21 @@ class Controller
                 'icon'=>array_key_exists($file->getFilename(), $icons) ? $icons[$file->getFilename()] : null,
             );
         }
+        ksort($pages);
         $this->set('pages', $pages);
-	}
+    }
 
-	public function indexAction()
-	{
-	    $args = CarteBlanche::getContainer()->get('request')->getArguments();
-	    $page_name = '00-home';
-	    foreach ($args as $var=>$val) {
-	        if ( ! empty($var) && is_string($var) && substr_count($var, '.html')>0) {
-	            $page_name = $var;
-	        } elseif ( ! empty($var) && is_string($var) && substr_count($var, '_html')>0) {
-	            $page_name = str_replace('_html', '.html', $var);
-	        }
-	    }
+    public function indexAction()
+    {
+        $args = CarteBlanche::getContainer()->get('request')->getArguments();
+        $page_name = '00-home';
+        foreach ($args as $var=>$val) {
+            if ( ! empty($var) && is_string($var) && substr_count($var, '.html')>0) {
+                $page_name = $var;
+            } elseif ( ! empty($var) && is_string($var) && substr_count($var, '_html')>0) {
+                $page_name = str_replace('_html', '.html', $var);
+            }
+        }
 
         // page data
         $this->set('route', $page_name);
@@ -81,29 +82,30 @@ class Controller
         $this->set('page', $page);
 
         // output
-		return array_merge($this->_registry, array('output'=>''));
-	}
+        return array_merge($this->_registry, array('output'=>''));
+    }
 
-	public function emptyAction(){}
+    public function emptyAction(){}
 
-    public function errorAction(\Exception $e, $code)
+    public function errorAction(\CarteBlanche\Interfaces\CarteBlancheExceptionInterface $e, $code)
     {
+        $page = array();
         switch ($code) {
             case 404:
-                $message = '<h1>The requested page could not be found.</h1>';
+                $page['name'] = 'The requested page could not be found.';
                 break;
             default:
-                $message = '<h1>We are sorry, but something went terribly wrong.</h1>';
+                $page['name'] = 'We are sorry, but something went terribly wrong.';
         }
-        return CarteBlanche::getContainer()->get('front_controller')
-            ->renderProductionError($message, $code);
-        $message .= '<p>'.$e->getMessage().'</p>'
-                    .'<pre>'.$e->getTraceAsString().'</pre>';
-
-var_export($message);
-exit('yo');
-
-        return new Response($message);
+        $page['content'] = '<p>'.$e->getMessage().'</p>'
+            .'<pre>'.$e->getTraceAsString().'</pre>';
+        $this->set('page', $page);
+        $mode = CarteBlanche::getKernel()->getMode();
+        if ($mode==='dev') {
+            return CarteBlanche::getContainer()->get('front_controller')
+                ->renderProductionError($page, $code);
+        }
+        return array_merge($this->_registry, array('output'=>''));
     }
 
 // ------------------------
@@ -289,8 +291,8 @@ exit('yo');
 
     public static function phpize($source, array $params = array())
     {
-	    return CarteBlanche::getContainer()->get('front_controller')
-	        ->view($source, $params);
+        return CarteBlanche::getContainer()->get('front_controller')
+            ->view($source, $params);
     }
 
 }

@@ -618,12 +618,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/library.git",
-                "reference": "c4a6c5ce15150b1d670933ded704f97d9e218082"
+                "reference": "d61a85b91861ef655fdbf5677bc37b433883aca9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/library/zipball/c4a6c5ce15150b1d670933ded704f97d9e218082",
-                "reference": "c4a6c5ce15150b1d670933ded704f97d9e218082",
+                "url": "https://api.github.com/repos/atelierspierrot/library/zipball/d61a85b91861ef655fdbf5677bc37b433883aca9",
+                "reference": "d61a85b91861ef655fdbf5677bc37b433883aca9",
                 "shasum": ""
             },
             "require": {
@@ -668,7 +668,7 @@
                 "helpers",
                 "library"
             ],
-            "time": "2014-03-25 06:24:37"
+            "time": "2014-05-05 08:33:54"
         },
         {
             "name": "atelierspierrot/markdown-extended",
@@ -807,12 +807,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/patterns.git",
-                "reference": "cc1a818fdb750e0699f8e87db3dfc4fea7309017"
+                "reference": "a6244ff7c8d5ad3cb3ac582775a2043ad0478a32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/patterns/zipball/cc1a818fdb750e0699f8e87db3dfc4fea7309017",
-                "reference": "cc1a818fdb750e0699f8e87db3dfc4fea7309017",
+                "url": "https://api.github.com/repos/atelierspierrot/patterns/zipball/a6244ff7c8d5ad3cb3ac582775a2043ad0478a32",
+                "reference": "a6244ff7c8d5ad3cb3ac582775a2043ad0478a32",
                 "shasum": ""
             },
             "require": {
@@ -856,7 +856,7 @@
                 "patterns",
                 "php"
             ],
-            "time": "2014-03-25 06:25:43"
+            "time": "2014-05-05 08:15:25"
         },
         {
             "name": "atelierspierrot/templatengine",
