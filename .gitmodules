@@ -3,4 +3,4 @@
 	url = https://github.com/markdown-extended/manifest
 [submodule "www/submodules/php-markdown-extended.git"]
 	path = www/submodules/php-markdown-extended.git
-	url = http://github.com/atelierspierrot/markdown-extended
+	url = http://github.com/piwi/markdown-extended
