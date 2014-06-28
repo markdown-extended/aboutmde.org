@@ -1,7 +1,3 @@
-/*
- * https://github.com/mdo/github-buttons
- */
-function in_array(e,t){var n=e.length;for(var r=0;r<n;r++){if(e[r]==t){return true}}return false}function parseUrl(e){var t=/^(?:([^:\/?#]+):)?(?:\/\/()(?:(?:()(?:([^:@]*):?([^:@]*))?@)?([^:\/?#]*)(?::(\d*))?))?()(?:(()(?:(?:[^?#\/]*\/)*)()(?:[^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,n=/(?:^|&)([^&=]*)=?([^&]*)/g,r=["source","scheme","authority","userInfo","user","pass","host","port","relative","path","directory","file","query","fragment"],i=t.exec(e),s={},o={},u=r.length;while(u--){if(i[u]){s[r[u]]=i[u]}}query=s["query"]||"";s["query"]={};query.replace(n,function(e,t,n){if(t){s["query"][t]=n}});return s}function buildUrl(e,t,n,r,i){var s=ghb_baseurl+"?user="+e+"&type="+(t!==undefined&&t!==null?t:ghb_type_default);if(n!==undefined&&n!==null)s+="&repo="+n;if(r!==undefined&&r===true)s+="&count=true";if(i!==undefined&&i==="large")s+="&size=large";return s}function makeFrame(e,t,n,r){ifrm=document.createElement("IFRAME");ifrm.setAttribute("src",encodeURI(e));ifrm.setAttribute("allowtransparency",true);ifrm.setAttribute("frameborder",0);ifrm.setAttribute("scrolling",0);ifrm.style.width=t+"px";ifrm.style.height=n+"px";if(r!==undefined&&typeof r==="object"){for(var i in r){if(!in_array(ghb_attributes,i)){ifrm.setAttribute(i,r[i])}}}return ifrm}function getOtherAttributes(e){var t={};for(var n,r=0,i=e.attributes,s=i.length;r<s;r++){n=i.item(r);t[n.nodeName]=n.nodeValue}return t}function parseHrefUrl(e){var t=parseUrl(e),n=t["path"]||"",r={};if(n.length){if(n.charAt(0)=="/"){n=n.substring(1)}var i=n.split("/");if(i.length>0){r.user=i[0];if(i.length>1){r.repo=i[1]}}}return r}function processGithubButton(e){var t=e.getAttribute("href")||e.getAttribute("data-src"),n=parseHrefUrl(t),r={},i=getOtherAttributes(e);r.count=e.getAttribute("data-show-count")||false;r.size=e.getAttribute("data-size")||"normal";r.user=n["user"]||e.getAttribute("data-user")||null;r.repo=n["repo"]||e.getAttribute("data-repo")||null;r.type=e.getAttribute("data-type")||ghb_type_default;if(r.count==="true"){r.count=true}if(r.user.length>0){var s=buildUrl(r.user,r.type,r.repo,r.count,r.size),o=(r.count===true?"count":"basic")+(r.size==="large"?"large":""),u=ghb_presets[r.type][o],a=makeFrame(s,u.width,u.height,i);e.parentNode.replaceChild(a,e)}}if(document.getElementsByClassName===undefined){document.getElementsByClassName=function(e){var t=new RegExp("(?:^|\\s)"+e+"(?:$|\\s)");var n=document.getElementsByTagName("*");var r=[];var i;for(var s=0;(i=n[s])!==null;s++){var o=i.className;if(o&&o.indexOf(e)!==-1&&t.test(o)){r.push(i)}}return r}}var ghb_baseurl="http://ghbtns.com/github-btn.html",ghb_class_default="github-button",ghb_types=["follow","fork","watch"],ghb_type_default="watch",ghb_attributes=["data-show-count","data-size","data-user","data-repo","data-type","href"],ghb_presets={watch:{basic:{width:92,height:20},count:{width:125,height:20},basiclarge:{width:122,height:30},countlarge:{width:155,height:30}},fork:{basic:{width:92,height:20},count:{width:125,height:20},basiclarge:{width:122,height:30},countlarge:{width:155,height:30}},follow:{basic:{width:162,height:20},count:{width:195,height:20},basiclarge:{width:300,height:30},countlarge:{width:340,height:30}}};(function(){var e=document.getElementsByClassName(ghb_class_default);if(e.length>0){for(j=0;j<e.length;j++){processGithubButton(e[j])}}for(i=0;i<ghb_types.length;i++){var t=ghb_types[i],n="github-"+t+"-button",e=document.getElementsByClassName(n);if(e.length>0){for(j=0;j<e.length;j++){processGithubButton(e[j])}}}})();
 
 /*
  * Markdown Reminders popup handling
@@ -198,26 +194,6 @@ function activateNavigationMenu() {
             var atag = $(o).find('a').first();
             if (atag && atag.attr('href')===page) { atag.addClass('active'); }
         });
-    }
-}
-
-function scrollToAnchor(href) {
-    href = typeof(href) == "string" ? href : $(this).attr("href");
-    if (!href) return; if (href.charAt(0) == "#") {
-        var $target = $(href); if ($target.length) {
-            $('html, body').animate({ scrollTop: $target.offset().top - 70 }, "slow");
-            if (history && "pushState" in history) { history.pushState({}, document.title, window.location.pathname + href); }
-        }
-    }
-}
-function getToHash(){
-    var _hash = window.location.hash;
-    if (_hash!==undefined) {
-        var hash = $('#'+_hash.replace('#', ''));
-        if (hash.length) {
-            var poz = hash.position();
-            $("html:not(:animated),body:not(:animated)").animate({ scrollTop: poz.top });
-        }
     }
 }
 

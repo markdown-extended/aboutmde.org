@@ -7,9 +7,9 @@ RewriteEngine On
 RewriteRule ^(.*/)?\.(.*)/ - [F]
 
 # setting the error pages
-ErrorDocument 403 /index.php?forbidden
-ErrorDocument 404 /index.php?not_found
-ErrorDocument 500 /index.php?error
+ErrorDocument 403 /?a=forbidden
+ErrorDocument 404 /?a=notfound
+ErrorDocument 500 /?a=error
 
 # skip all this if the file or the dir exists
 RewriteCond %{REQUEST_FILENAME} !-f

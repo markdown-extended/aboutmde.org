@@ -47,7 +47,8 @@ $main = \CarteBlanche\App\Kernel::create(
     null, 
     ((isset($_SERVER['REMOTE_ADDR']) && in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1','localhost'))) ? 
         (!empty($_GET) && isset($_GET['mode']) ? $_GET['mode'] : 'dev')
-        : 'prod'
+        :
+        (!empty($_GET) && isset($_GET['mode']) && in_array($_GET['mode'], array('dev','prod','debug')) ? $_GET['mode'] : 'prod')
     )
 )
 ->distribute();
