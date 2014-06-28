@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "8e1967e0d703039693cc43ccdab965e0",
+    "hash": "c5602abdafac3ccbcaedd8c73031b9c6",
     "packages": [
         {
             "name": "atelierspierrot/assets-bootstrapper",
@@ -11,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/assets-bootstrapper.git",
-                "reference": "4f28ddf1d0d4d27b69648669ad7034de45635427"
+                "reference": "60d5b35be409962ae93e488d318290cded9f1ee5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/assets-bootstrapper/zipball/4f28ddf1d0d4d27b69648669ad7034de45635427",
-                "reference": "4f28ddf1d0d4d27b69648669ad7034de45635427",
+                "url": "https://api.github.com/repos/atelierspierrot/assets-bootstrapper/zipball/60d5b35be409962ae93e488d318290cded9f1ee5",
+                "reference": "60d5b35be409962ae93e488d318290cded9f1ee5",
                 "shasum": ""
             },
             "require": {
@@ -55,13 +56,14 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "description": "The Bootstrap & Font-Awesome libraries ready to use with the atelierspierrot/template-engine",
+            "description": "The Bootstrap & Font-Awesome libraries ready to use with the atelierspierrot/assets-manager",
             "homepage": "http://github.com/atelierspierrot/assets-bootstrapper",
             "keywords": [
+                "assets-manager",
                 "bootstrap",
                 "font-awesome"
             ],
-            "time": "2014-05-04 14:17:19"
+            "time": "2014-06-25 21:22:54"
         },
         {
             "name": "atelierspierrot/assets-library",
@@ -69,12 +71,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/assets-library.git",
-                "reference": "7ede272579412d074af7adb4572730d130a840a7"
+                "reference": "b1942af3e6053a31dfd47bde4a2a8993431dca43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/assets-library/zipball/7ede272579412d074af7adb4572730d130a840a7",
-                "reference": "7ede272579412d074af7adb4572730d130a840a7",
+                "url": "https://api.github.com/repos/atelierspierrot/assets-library/zipball/b1942af3e6053a31dfd47bde4a2a8993431dca43",
+                "reference": "b1942af3e6053a31dfd47bde4a2a8993431dca43",
                 "shasum": ""
             },
             "require": {
@@ -409,8 +411,8 @@
             "authors": [
                 {
                     "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -423,7 +425,7 @@
             "keywords": [
                 "javascript library"
             ],
-            "time": "2013-12-21 12:26:23"
+            "time": "2014-06-22 21:35:27"
         },
         {
             "name": "atelierspierrot/assets-manager",
@@ -431,12 +433,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/assets-manager.git",
-                "reference": "cfced07a8b955bfbed9dbc9c986d4409a206480b"
+                "reference": "b6d2aa098a656984d0c01a78d4ebdcd07bd77519"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/assets-manager/zipball/cfced07a8b955bfbed9dbc9c986d4409a206480b",
-                "reference": "cfced07a8b955bfbed9dbc9c986d4409a206480b",
+                "url": "https://api.github.com/repos/atelierspierrot/assets-manager/zipball/b6d2aa098a656984d0c01a78d4ebdcd07bd77519",
+                "reference": "b6d2aa098a656984d0c01a78d4ebdcd07bd77519",
                 "shasum": ""
             },
             "require": {
@@ -468,8 +470,8 @@
             "authors": [
                 {
                     "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -484,7 +486,7 @@
                 "composer plugin",
                 "package"
             ],
-            "time": "2013-11-06 20:15:32"
+            "time": "2014-06-25 20:32:25"
         },
         {
             "name": "atelierspierrot/devdebug",
@@ -492,12 +494,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/devdebug.git",
-                "reference": "e350abec3c944ac3214509ba1feb39ec1641bcf6"
+                "reference": "1f3dd52b6a5463a0686815e611c40b712fe7567c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/devdebug/zipball/e350abec3c944ac3214509ba1feb39ec1641bcf6",
-                "reference": "e350abec3c944ac3214509ba1feb39ec1641bcf6",
+                "url": "https://api.github.com/repos/atelierspierrot/devdebug/zipball/1f3dd52b6a5463a0686815e611c40b712fe7567c",
+                "reference": "1f3dd52b6a5463a0686815e611c40b712fe7567c",
                 "shasum": ""
             },
             "require": {
@@ -528,14 +530,14 @@
             ],
             "authors": [
                 {
-                    "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
-                },
-                {
                     "name": "Les Ateliers Pierrot & contributors",
                     "email": "contact@ateliers-pierrot.fr",
                     "homepage": "http://www.ateliers-pierrot.fr/"
+                },
+                {
+                    "name": "Pierre Cassat",
+                    "email": "piwi@ateliers-pierrot.fr",
+                    "homepage": "http://github.com/pierowbmstr"
                 }
             ],
             "description": "A PHP Package to help development and debugging.",
@@ -554,12 +556,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/internationalization.git",
-                "reference": "39525d564197ce3c3693781dcf1a74f2d775bd1c"
+                "reference": "4dcc36656b1ed1a40562df8f77f13787da5dc7a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/internationalization/zipball/39525d564197ce3c3693781dcf1a74f2d775bd1c",
-                "reference": "39525d564197ce3c3693781dcf1a74f2d775bd1c",
+                "url": "https://api.github.com/repos/atelierspierrot/internationalization/zipball/4dcc36656b1ed1a40562df8f77f13787da5dc7a3",
+                "reference": "4dcc36656b1ed1a40562df8f77f13787da5dc7a3",
                 "shasum": ""
             },
             "require": {
@@ -594,8 +596,8 @@
             "authors": [
                 {
                     "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -610,7 +612,7 @@
                 "internationalization",
                 "localization"
             ],
-            "time": "2013-11-06 20:39:20"
+            "time": "2014-06-22 15:05:34"
         },
         {
             "name": "atelierspierrot/library",
@@ -618,12 +620,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/library.git",
-                "reference": "d61a85b91861ef655fdbf5677bc37b433883aca9"
+                "reference": "dce3d82287329b7339323e830e3ef57568baaa57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/library/zipball/d61a85b91861ef655fdbf5677bc37b433883aca9",
-                "reference": "d61a85b91861ef655fdbf5677bc37b433883aca9",
+                "url": "https://api.github.com/repos/atelierspierrot/library/zipball/dce3d82287329b7339323e830e3ef57568baaa57",
+                "reference": "dce3d82287329b7339323e830e3ef57568baaa57",
                 "shasum": ""
             },
             "require": {
@@ -653,8 +655,8 @@
             "authors": [
                 {
                     "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -668,79 +670,7 @@
                 "helpers",
                 "library"
             ],
-            "time": "2014-05-05 08:33:54"
-        },
-        {
-            "name": "atelierspierrot/markdown-extended",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/atelierspierrot/markdown-extended.git",
-                "reference": "3b8780e5b0b47a6f0a189c93dba8a5f6900cc612"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/markdown-extended/zipball/3b8780e5b0b47a6f0a189c93dba8a5f6900cc612",
-                "reference": "3b8780e5b0b47a6f0a189c93dba8a5f6900cc612",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpmd/phpmd": "1.4.*",
-                "phpunit/phpunit": "3.7.*",
-                "sami/sami": "dev-master"
-            },
-            "bin": [
-                "bin/markdown-extended"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.0.*-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "MarkdownExtended": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "John Gruber",
-                    "homepage": "http://daringfireball.net/"
-                },
-                {
-                    "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
-                },
-                {
-                    "name": "Michel Fortin",
-                    "homepage": "http://michelf.com/",
-                    "role": "markdown Developer"
-                },
-                {
-                    "name": "Les Ateliers Pierrot & contributors",
-                    "email": "contact@ateliers-pierrot.fr",
-                    "homepage": "http://www.ateliers-pierrot.fr/"
-                },
-                {
-                    "name": "Fletcher T. Penney",
-                    "homepage": "http://fletcherpenney.net/"
-                }
-            ],
-            "description": "A complete PHP 5.3 package of Markdown syntax parser (extended version)",
-            "homepage": "http://github.com/atelierspierrot/markdown-extended",
-            "keywords": [
-                "markdown"
-            ],
-            "time": "2014-03-10 21:06:43"
+            "time": "2014-06-25 17:46:23"
         },
         {
             "name": "atelierspierrot/mime-mailer",
@@ -748,12 +678,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/mime-mailer.git",
-                "reference": "a5157efdaa5ed9f197bcf151b71d544a5ee5fcf8"
+                "reference": "31f56b610ef7c226c8c4653e277abdd0bc839b40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/mime-mailer/zipball/a5157efdaa5ed9f197bcf151b71d544a5ee5fcf8",
-                "reference": "a5157efdaa5ed9f197bcf151b71d544a5ee5fcf8",
+                "url": "https://api.github.com/repos/atelierspierrot/mime-mailer/zipball/31f56b610ef7c226c8c4653e277abdd0bc839b40",
+                "reference": "31f56b610ef7c226c8c4653e277abdd0bc839b40",
                 "shasum": ""
             },
             "require": {
@@ -784,8 +714,8 @@
             "authors": [
                 {
                     "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -799,7 +729,7 @@
                 "emailing",
                 "mime"
             ],
-            "time": "2013-11-06 21:45:16"
+            "time": "2014-06-22 19:50:29"
         },
         {
             "name": "atelierspierrot/patterns",
@@ -807,12 +737,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/patterns.git",
-                "reference": "a6244ff7c8d5ad3cb3ac582775a2043ad0478a32"
+                "reference": "c9b5f278a2e4f594205ad6fb85cefa31fc8efe19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/patterns/zipball/a6244ff7c8d5ad3cb3ac582775a2043ad0478a32",
-                "reference": "a6244ff7c8d5ad3cb3ac582775a2043ad0478a32",
+                "url": "https://api.github.com/repos/atelierspierrot/patterns/zipball/c9b5f278a2e4f594205ad6fb85cefa31fc8efe19",
+                "reference": "c9b5f278a2e4f594205ad6fb85cefa31fc8efe19",
                 "shasum": ""
             },
             "require": {
@@ -839,9 +769,9 @@
             ],
             "authors": [
                 {
-                    "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "name": "Pierre Cassat (piwi)",
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -856,7 +786,7 @@
                 "patterns",
                 "php"
             ],
-            "time": "2014-05-05 08:15:25"
+            "time": "2014-06-22 09:27:50"
         },
         {
             "name": "atelierspierrot/templatengine",
@@ -864,12 +794,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/templatengine.git",
-                "reference": "e7b3d1a5ab4581e0d7f36153346c899ba843440a"
+                "reference": "46e4e8f5785a66fd15069c69fa5ce9d691a8cfbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/templatengine/zipball/e7b3d1a5ab4581e0d7f36153346c899ba843440a",
-                "reference": "e7b3d1a5ab4581e0d7f36153346c899ba843440a",
+                "url": "https://api.github.com/repos/atelierspierrot/templatengine/zipball/46e4e8f5785a66fd15069c69fa5ce9d691a8cfbd",
+                "reference": "46e4e8f5785a66fd15069c69fa5ce9d691a8cfbd",
                 "shasum": ""
             },
             "require": {
@@ -890,7 +820,7 @@
                 "document-root": "www",
                 "assets-presets": {
                     "jquery": {
-                        "js": "top:min:vendor_assets/jquery-last.min.js"
+                        "js": "first:min:vendor_assets/jquery-last.min.js"
                     },
                     "jquery.tablesorter": {
                         "css": "vendor_assets/blue/style.css",
@@ -931,8 +861,8 @@
             "authors": [
                 {
                     "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -946,7 +876,7 @@
                 "boilerplate",
                 "template engine"
             ],
-            "time": "2014-03-16 19:34:38"
+            "time": "2014-06-23 17:40:46"
         },
         {
             "name": "atelierspierrot/validators",
@@ -954,12 +884,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/validators.git",
-                "reference": "c64f719490ce112bd9a0bc0a2b398b3c039ae39c"
+                "reference": "f0b9e01748d9b7ba343fc35911f5cbe2dd97b670"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/validators/zipball/c64f719490ce112bd9a0bc0a2b398b3c039ae39c",
-                "reference": "c64f719490ce112bd9a0bc0a2b398b3c039ae39c",
+                "url": "https://api.github.com/repos/atelierspierrot/validators/zipball/f0b9e01748d9b7ba343fc35911f5cbe2dd97b670",
+                "reference": "f0b9e01748d9b7ba343fc35911f5cbe2dd97b670",
                 "shasum": ""
             },
             "require": {
@@ -988,8 +918,8 @@
             "authors": [
                 {
                     "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -1002,7 +932,7 @@
             "keywords": [
                 "validator"
             ],
-            "time": "2013-11-06 21:50:14"
+            "time": "2014-06-22 12:11:04"
         },
         {
             "name": "atelierspierrot/webfilesystem",
@@ -1010,12 +940,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/webfilesystem.git",
-                "reference": "7774a694f02bb1fd4e2832aadcda59590c40b6dd"
+                "reference": "df9bed4b2f2d5baa05ae2789f27d9f59aea38d01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/webfilesystem/zipball/7774a694f02bb1fd4e2832aadcda59590c40b6dd",
-                "reference": "7774a694f02bb1fd4e2832aadcda59590c40b6dd",
+                "url": "https://api.github.com/repos/atelierspierrot/webfilesystem/zipball/df9bed4b2f2d5baa05ae2789f27d9f59aea38d01",
+                "reference": "df9bed4b2f2d5baa05ae2789f27d9f59aea38d01",
                 "shasum": ""
             },
             "require": {
@@ -1045,8 +975,8 @@
             "authors": [
                 {
                     "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -1062,7 +992,7 @@
                 "spl",
                 "webserver"
             ],
-            "time": "2014-02-01 10:56:32"
+            "time": "2014-06-22 12:26:38"
         },
         {
             "name": "atelierspierrot/webservices",
@@ -1070,19 +1000,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/webservices.git",
-                "reference": "d45a8234d7778ebc5e06dc62a9c0d30104686eea"
+                "reference": "ae1a46a11f294edeb813902462fc2209a7862d55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/webservices/zipball/d45a8234d7778ebc5e06dc62a9c0d30104686eea",
-                "reference": "d45a8234d7778ebc5e06dc62a9c0d30104686eea",
+                "url": "https://api.github.com/repos/atelierspierrot/webservices/zipball/ae1a46a11f294edeb813902462fc2209a7862d55",
+                "reference": "ae1a46a11f294edeb813902462fc2209a7862d55",
                 "shasum": ""
             },
             "require": {
                 "atelierspierrot/library": "1.*",
-                "atelierspierrot/markdown-extended": "dev-master",
                 "atelierspierrot/patterns": "1.*",
                 "php": ">=5.3.0",
+                "piwi/markdown-extended": "dev-master",
                 "psr/log": "dev-master"
             },
             "require-dev": {
@@ -1107,8 +1037,8 @@
             "authors": [
                 {
                     "name": "Pierre Cassat",
-                    "email": "piwi@ateliers-pierrot.fr",
-                    "homepage": "http://github.com/pierowbmstr"
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
                 },
                 {
                     "name": "Les Ateliers Pierrot & contributors",
@@ -1122,7 +1052,7 @@
                 "engine",
                 "webservices"
             ],
-            "time": "2013-11-06 21:53:04"
+            "time": "2014-06-28 22:59:01"
         },
         {
             "name": "carte-blanche/core",
@@ -1130,12 +1060,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-carteblanche/core.git",
-                "reference": "6658402e191006336002a9fc5e6d0e710eb3ba01"
+                "reference": "65beda8a9fc86b3da96ec28c216f6dece703345b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-carteblanche/core/zipball/6658402e191006336002a9fc5e6d0e710eb3ba01",
-                "reference": "6658402e191006336002a9fc5e6d0e710eb3ba01",
+                "url": "https://api.github.com/repos/php-carteblanche/core/zipball/65beda8a9fc86b3da96ec28c216f6dece703345b",
+                "reference": "65beda8a9fc86b3da96ec28c216f6dece703345b",
                 "shasum": ""
             },
             "require": {
@@ -1193,7 +1123,127 @@
                 "modular",
                 "mvc"
             ],
-            "time": "2014-03-20 20:59:56"
+            "time": "2014-06-21 17:07:26"
+        },
+        {
+            "name": "piwi/bootstrap-companion",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/piwi/bootstrap-companion.git",
+                "reference": "94252ceba3fc1d5f8fd2e5c693d2baf87e6ce00c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/piwi/bootstrap-companion/zipball/94252ceba3fc1d5f8fd2e5c693d2baf87e6ce00c",
+                "reference": "94252ceba3fc1d5f8fd2e5c693d2baf87e6ce00c",
+                "shasum": ""
+            },
+            "type": "library-assets",
+            "extra": {
+                "assets-dir": "src/",
+                "assets-presets": {
+                    "bootcomp": {
+                        "css": "bootstrap-companion.css",
+                        "js": "bootstrap-companion.js",
+                        "require": [
+                            "jquery",
+                            "bootstrap"
+                        ]
+                    }
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "@piwi",
+                    "homepage": "http://geekli.st/piwi"
+                }
+            ],
+            "description": "The UNOFFICIAL Bootstrap companion",
+            "homepage": "http://piwi.github.io/bootstrap-companion",
+            "keywords": [
+                "assets",
+                "bootstrap",
+                "font-awesome"
+            ],
+            "support": {
+                "source": "https://github.com/piwi/bootstrap-companion/tree/master",
+                "issues": "https://github.com/piwi/bootstrap-companion/issues"
+            },
+            "time": "2014-06-28 22:31:54"
+        },
+        {
+            "name": "piwi/markdown-extended",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/piwi/markdown-extended.git",
+                "reference": "5681190b651facd89405ad288496bd699dec6fb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/piwi/markdown-extended/zipball/5681190b651facd89405ad288496bd699dec6fb5",
+                "reference": "5681190b651facd89405ad288496bd699dec6fb5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "1.4.*",
+                "phpunit/phpunit": "3.7.*",
+                "sami/sami": "dev-master",
+                "symfony/finder": "~2.1"
+            },
+            "bin": [
+                "bin/markdown-extended"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.*-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "MarkdownExtended": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "John Gruber",
+                    "homepage": "http://daringfireball.net/"
+                },
+                {
+                    "name": "Pierre Cassat",
+                    "email": "me@e-piwi.fr",
+                    "homepage": "http://github.com/piwi"
+                },
+                {
+                    "name": "Michel Fortin",
+                    "homepage": "http://michelf.com/",
+                    "role": "markdown Developer"
+                },
+                {
+                    "name": "Fletcher T. Penney",
+                    "homepage": "http://fletcherpenney.net/"
+                }
+            ],
+            "description": "A complete PHP 5.3 package of Markdown syntax parser (extended version)",
+            "homepage": "http://github.com/piwi/markdown-extended",
+            "keywords": [
+                "markdown",
+                "markdown extended",
+                "mde"
+            ],
+            "time": "2014-06-28 17:58:19"
         },
         {
             "name": "psr/log",
@@ -1245,12 +1295,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "e9525fc511a51e7bfa214c6c420515c580fda35a"
+                "reference": "a0e90f173c33a57bfbb5561793d25864182239ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/e9525fc511a51e7bfa214c6c420515c580fda35a",
-                "reference": "e9525fc511a51e7bfa214c6c420515c580fda35a",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/a0e90f173c33a57bfbb5561793d25864182239ad",
+                "reference": "a0e90f173c33a57bfbb5561793d25864182239ad",
                 "shasum": ""
             },
             "require": {
@@ -1259,7 +1309,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "2.6-dev"
                 }
             },
             "autoload": {
@@ -1285,7 +1335,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-18 20:40:13"
+            "time": "2014-06-20 17:41:51"
         }
     ],
     "packages-dev": [
@@ -1297,8 +1347,9 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "psr/log": 20,
-        "atelierspierrot/markdown-extended": 20,
-        "carte-blanche/core": 20
+        "piwi/markdown-extended": 20,
+        "carte-blanche/core": 20,
+        "piwi/bootstrap-companion": 20
     },
     "platform": {
         "php": ">=5.3.0"

@@ -8,9 +8,10 @@
         "atelierspierrot/library": "1.*",
         "atelierspierrot/webfilesystem": "1.*",
         "symfony/yaml": "~2.4",
-        "atelierspierrot/markdown-extended": "dev-master",
+        "piwi/markdown-extended": "dev-master",
         "atelierspierrot/assets-bootstrapper": "1.*",
-        "carte-blanche/core": "dev-master"
+        "carte-blanche/core": "dev-master",
+        "piwi/bootstrap-companion": "dev-master"
     },
     "autoload": {
         "psr-0": { "AboutMde": "src" }
@@ -24,5 +25,8 @@
     },
     "extra": {
         "views-functions": "src/views_functions.php"
-    }
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/piwi/bootstrap-companion" }
+    ]
 }
