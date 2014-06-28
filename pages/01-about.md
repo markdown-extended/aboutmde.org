@@ -25,7 +25,7 @@ instance by [GitHub](http://github.com) as one of the proposed syntaxes for info
 files (such like this one).
 
 
-### A short history of Markdown
+### A short history
 
 The original Markdown idea and the very first parser was made by
 [John Gruber](http://daringfireball.net/), coded in *Perl* script.
@@ -36,15 +36,19 @@ An extended implementation, known as **Markdown Extra**, has been written by
 Another extended implementation, known as **Multi Markdown**, has been written by 
 [Fletcher T. Penney](http://fletcherpenney.net/), coded in *Perl* script.
 
-Many other implementations exists for the syntax, with their own rules and tags. This is
-the reason why we try to uniformize and universalize these rules in this **Markdown Extended**
-specifications.
+### So why a new version of the syntax?
+
+Well, many other implementations exists for the syntax, with their own rules and tags. This is
+the reason why we try here to build a kind of *universal version* of the Markdown rules (which are
+quite *not*-universal along the web). The real work is the [Manifest](02-manifest.html) which
+is a kind of **un-official specifications** written with rigor and strictness to finally
+be a set of "rule for any purpose".
 
 
 ## Website credits
 
-The [aboutmde.org](http://aboutmde.org/) website is maintained by [Pierre Cassat](http://github.com/pierowbmstr/)
-(*aka* [@pierowbmstr](http://github.com/pierowbmstr/)) and built with the help of the following open source tools
+The [aboutmde.org](http://aboutmde.org/) website is maintained by [Pierre Cassat](http://github.com/piwi/)
+(*aka* [@pierowbmstr](http://github.com/piwi/)) and built with the help of the following open source tools
 and applications:
 
 -   [Carte Blanche](http://github.com/php-carteblanche/), a PHP framework created by 
@@ -66,3 +70,13 @@ and applications:
     License](http://www.opensource.org/licenses/mit-license.php) ;
 
 The icon used by aboutmde.org has been made by [Dustin Curtis](http://dcurt.is/the-markdown-mark).
+
+
+## License
+
+This website contents are licensed under a [Creative Commons Attribution Share Alike 3.0](http://spdx.org/licenses/CC-BY-SA-3.0).
+
+<div class="ab-box ab-info ab-margin" markdown="1">
+This means that you can share and adapt these contents as long as you cite the authors
+([aboutmde.org](http://aboutmde.org/)) and keep this license along with your derivatives.
+</div>

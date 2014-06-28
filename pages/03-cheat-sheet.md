@@ -10,6 +10,10 @@ $cheat_sheet->parseData();
 
 <p class="lead">The table below lists all Markdown Extended syntax rules with examples. You can use the search field to filter table entries, or the selector to reach a specific section.</p>
 
+<div class="alert alert-info dismissable visible-xs"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+<strong>NOTE</strong> - As this table is quite large, you should go to the "landscape" view of your device to view it under optimal conditions.
+</div>
+
 <br class="clearfix">
 <div class="row">
 <div class="col-xs-12 col-sm-6">

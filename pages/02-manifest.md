@@ -1,1 +1,1 @@
-../www/submodules/manifest.git/mde-manifest.md
+/Users/pierrecassat/Sites/GitHub_projects/MDE/manifest/mde-manifest.md
