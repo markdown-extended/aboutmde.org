@@ -25,12 +25,7 @@
 - name: anchor
   type: typo
   samples:
-    - |
-        ## title with anchor {#anchor}
-
-        some text
-
-        a link to [declared anchor](#anchor)
+    - "## title with anchor {#anchor}\n\nsome text\n\na link to [declared anchor](#anchor)"
 
 # code
 - name: code
@@ -57,15 +52,8 @@
 - name: headers
   type: typo
   samples:
-    - |
-        my title level 1
-        ================
-
-        my title level 2
-        ----------------
-    - |
-        # my title level 1
-        ### my title level 3
+    - "my title level 1\n================\n\nmy title level 2\n----------------\n\n### my title level 3"
+    - "# my title level 1\n### my title level 3"
 
 # horizontal-rule
 - name: horizontal-rule
@@ -81,18 +69,16 @@
   samples:
     - |
         > This is my blockquote
-        > and a second line ...
+          and a second line ...
     - |
         > (http://source.com) This is my blockquote
-        > and a second line ...
+          and a second line ...
 
 # pre-formated
 - name: pre-formated
   type: block
   samples:
-    - |
-            // this is my "pre" block
-            $var = val_fct();
+    - "    // this is my 'pre' block\n    $var = val_fct();\n    html <strong>tags</strong> are escaped"
     - |
         ~~~~
         My code here
@@ -150,6 +136,7 @@
   type: block
   samples:
     - |
+        [table caption]
         | First Header  | Second Header | Third Header |
         | ------------- | ------------: | :----------: |
         | Content Cell  | Content right-aligned | Content center-aligned |
@@ -181,8 +168,8 @@
         A paragraph with a referenced [hypertext link][myid] and some more text embedding an
         image: ![image for the test][myimage].
 
-        [myid]: http://example.com/ "Optional link title"
-        [myimage]: http://example.com/test.com "Optional image title" width=40px height=40px
+        [myid]: http://example.com/ "Optional link title"        
+        [myimage]: http://upload.wikimedia.org/wikipedia/commons/5/5a/Wikipedia-logo-v2-fr.png "Optional image title"
 
 # escaping
 - name: escaping
@@ -201,9 +188,29 @@
     - "\\[\\] brackets"
     - "\\{\\} curly brackets"
 
+# meta tags
+- name: meta tags
+  type: misc
+  samples:
+    - |
+        meta-name-1: my value for the meta-tag 1
+        meta-name-2: my meta-2 value
+            on two lines eventually
+        
+        this is your content after a blank line (we are at the very top of the document)
+        
+        **parsed version of this sample may not be pertinent (meta data are not dipslayed)**
+
 # inclusion
 - name: inclusion
   type: misc
   samples:
     - "<!-- @inclusion-test.md@ -->"
     - "<!-- @not-found.md@ -->"
+
+# raw html
+- name: raw html
+  type: misc
+  samples:
+    - "<div class='my-class'>My <strong>raw</strong> HTML content.</div>"
+    - "<div class='my-class' markdown='1'>My **raw** HTML content.</div>"

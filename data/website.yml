@@ -12,3 +12,9 @@ menu-icons:
     04-writers-doc.md: pencil-square
     05-developers-doc.md: file-text
     06-downloads.md: cogs
+    07-comments.md: comments
+    test: flask
+piwik:
+    active: true
+    server: stats.ateliers-pierrot.fr
+    idSite: 14
