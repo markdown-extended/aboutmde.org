@@ -2,13 +2,13 @@
 
 namespace AboutMde;
 
-use MarkdownExtended\MarkdownExtended,
-    MarkdownExtended\Content,
-    MarkdownExtended\OutputFormatInterface,
-    MarkdownExtended\OutputFormatHelperInterface,
-    MarkdownExtended\Helper as MDE_Helper,
-    MarkdownExtended\Exception as MDE_Exception,
-    MarkdownExtended\OutputFormat\HTMLHelper;
+use MarkdownExtended\MarkdownExtended;
+use MarkdownExtended\API\ContentInterface;
+use MarkdownExtended\API\OutputFormatInterface;
+use MarkdownExtended\API\OutputFormatHelperInterface;
+use MarkdownExtended\Helper as MDE_Helper;
+use MarkdownExtended\Exception as MDE_Exception;
+use MarkdownExtended\OutputFormat\HTMLHelper;
 
 use AboutMde\AboutMdeOutput;
 
@@ -27,10 +27,12 @@ class AboutMdeOutputHelper extends HTMLHelper implements OutputFormatHelperInter
         'toc_id'            => 'toc',
         'toc_class'         => 'toc-menu',
         'toc_item_title'    => 'Reach this section',
-        'permalink_mask_title' => 'Copy this link URL to get this title permanent link: #%%',
+        'permalink_mask_title' => 'Copy this link URL to get this title permanent link: %%',
         'permalink_title_separator' => ' - ',
         'toc_backlink_title'    => 'Click to go back to table of contents',
-        'backlink_onclick_mask' => "document.location.hash='%%'; return false;",
+//        'backlink_onclick_mask' => "document.location.hash='%%'; return false;",
+        'backlink_onclick_mask' => "return scrollToAnchor('#%%');",
+        
     );
 
     public static function getConfigOrDefault($var)
@@ -43,12 +45,12 @@ class AboutMdeOutputHelper extends HTMLHelper implements OutputFormatHelperInter
     /**
      * Build a hierarchical menu
      *
-     * @param object $content \MarkdownExtended\Content
+     * @param object $content \MarkdownExtended\API\ContentInterface
      * @param object $formater \MarkdownExtended\OutputFormatInterface
      *
      * @return string
      */
-    public function getToc(Content $md_content, OutputFormatInterface $formater, array $attributes = null)
+    public function getToc(ContentInterface $md_content, OutputFormatInterface $formater, array $attributes = null)
     {
         $cfg_toc_max_level = $this->getConfigOrDefault('toc_max_level');
         $cfg_toc_title = $this->getConfigOrDefault('toc_title');

@@ -2,13 +2,12 @@
 
 namespace AboutMde;
 
-use MarkdownExtended\MarkdownExtended,
-    MarkdownExtended\OutputFormatInterface,
-    MarkdownExtended\OutputFormat\AbstractOutputFormat,
-    MarkdownExtended\Helper as MDE_Helper,
-    MarkdownExtended\Exception as MDE_Exception,
-    MarkdownExtended\OutputFormat\HTML;
-
+use MarkdownExtended\MarkdownExtended;
+use MarkdownExtended\API\OutputFormatInterface;
+use MarkdownExtended\API\OutputFormat\AbstractOutputFormat;
+use MarkdownExtended\Helper as MDE_Helper;
+use MarkdownExtended\Exception as MDE_Exception;
+use MarkdownExtended\OutputFormat\HTML;
 use AboutMde\AboutMdeOutputHelper;
 
 /**
