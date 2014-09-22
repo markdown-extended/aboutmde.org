@@ -1,4 +1,7 @@
 {
+    "name": "markdown-extended/aboutmde.org",
+    "description": "Source code of the <aboutmde.org> website.",
+    "license": "CC BY-NC-SA 4.0",
     "require": {
         "php": ">=5.3.0",
         "psr/log": "dev-master",
@@ -24,6 +27,38 @@
         "vendor-dir": "src/vendor"
     },
     "extra": {
-        "views-functions": "src/views_functions.php"
-    }
+        "views-functions": "src/views_functions.php",
+        "assets-presets": {
+            "jquery": {
+                "jsfiles_footer": "1:vendor/atelierspierrot/templatengine/vendor_assets/jquery-last.min.js"
+            },
+            "bootstrap": {
+                "css": "2:vendor/atelierspierrot/assets-bootstrapper/bootstrap/css/bootstrap.min.css",
+                "jsfiles_footer": "2:vendor/atelierspierrot/assets-bootstrapper/bootstrap/js/bootstrap.min.js",
+                "require": [ "jquery" ]
+            },
+            "bootstrap-companion": {
+                "css": "3:vendor/piwi/bootstrap-companion/bootstrap-companion.min.css",
+                "jsfiles_footer": "3:vendor/piwi/bootstrap-companion/bootstrap-companion.min.js",
+                "require": [ "bootstrap" ]
+            },
+            "font-awesome": {
+                "css": "4:vendor/atelierspierrot/assets-bootstrapper/font-awesome/css/font-awesome.min.css"
+            },
+            "filtertable": {
+                "jsfiles_footer": [
+                    "5:libs/jquery/bindWithDelay.js",
+                    "6:libs/jquery/jquery.filtertable.custom.js"
+                ]
+            },
+            "mde-pages": {
+                "jsfiles_footer": "10:js/scripts.js",
+                "css": "10:css/styles.css",
+                "require": [ "bootstrap-companion", "font-awesome" ]
+            }
+        }
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/piwi/bootstrap-companion" }
+    ]
 }
