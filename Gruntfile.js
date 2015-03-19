@@ -191,14 +191,7 @@ module.exports = function(grunt) {
 
         markdown: {
             options:            _APP.merge_data_options(),
-            index: {
-                files: [{
-                    expand:     true,
-                    src:        _APP.pages_dir + _APP.pages_src_all,
-                    dest:       _APP.tmp_dir,
-                    ext:        _APP.html_ext
-                }]
-            }
+            index: {}
         },
 
         merge_data: {
@@ -207,10 +200,7 @@ module.exports = function(grunt) {
                 src:            [ _APP.getEnvConfigPath() , _APP.data_dir + _APP.data_src_all ],
                 dest:           _APP.tmp_dir + _APP.data_htaccess
             },
-            index: {
-                src:            [ _APP.getEnvConfigPath() , _APP.data_dir + _APP.data_src_all , _APP.pages_dir + _APP.data_src_index ],
-                dest:           _APP.tmp_dir + _APP.data_index
-            },
+            index: {},
             meta_404: {
                 src:            [ _APP.getEnvConfigPath() , _APP.data_dir + _APP.data_src_all , _APP.pages_dir + _APP.data_src_404 ],
                 dest:           _APP.tmp_dir + _APP.data_404
@@ -230,13 +220,7 @@ module.exports = function(grunt) {
                     dest:       _APP.www_dir + _APP.web_htaccess
                 }]
             },
-            index: {
-                files : [{
-                    template:   _APP.templates_dir + _APP.template_page,
-                    data:       _APP.tmp_dir + _APP.data_index,
-                    dest:       _APP.www_dir + _APP.web_index
-                }]
-            },
+            index: {},
             meta_404: {
                 files : [{
                     template:   _APP.templates_dir + _APP.template_meta_page,
